@@ -8,3 +8,4 @@ Credits:
 - @Rubix_Dev1 - programmer, game designer
 - @sudigs-panks - artist
 - itch.io link: https://sudigs-panks.itch.io/homesickness
+(EP means eiropian parlament)

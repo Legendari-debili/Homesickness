@@ -2,35 +2,25 @@ extends CharacterBody2D
 
 const JUMP_VELOCITY := 30.0
 const SPEED := 50.0
-const LOST_ENERGY := 1
+const LOST_ENERGY_PER_BOUNCE := 1
 
-func kaput():
-	pass
-	
-func _ready() -> void:
-	var lives := []
-	for my in get_children():
-		if my.name.begins_with("Life"):
-			lives.append(my)
-	
-	print(lives)
+@onready var balls_plus_audio = $BallsPlus
+@onready var launch_audio = $Launch
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Handle jump.
 	if is_on_floor():
 		if Input.is_action_pressed("launch"):
 			velocity.y = -(Globals.ep * JUMP_VELOCITY * 2)
-			Globals.ep = clamp(Globals.ep - (LOST_ENERGY * 2), 0, INF)
+			Globals.ep = clamp(Globals.ep - (LOST_ENERGY_PER_BOUNCE * 2), 0, INF)
+			launch_audio.play()
 		else:
 			velocity.y = -(Globals.ep * JUMP_VELOCITY)
-			Globals.ep = clamp(Globals.ep - LOST_ENERGY, 0, INF)
+			Globals.ep = clamp(Globals.ep - LOST_ENERGY_PER_BOUNCE, 0, INF)
+			balls_plus_audio.play()
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * Globals.ep * SPEED
@@ -39,6 +29,23 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
-func _process(delta: float):
-	if position.y >= 100:
-		kaput()
+func _process(_delta: float) -> void:
+	if position.y >= 500 or Globals.ep == 0:
+		var lose_text = find_child("Lose")
+		var lose_sound = find_child("LoseAudio")
+	
+		lose_text.visible = true
+		lose_sound.play()
+		get_tree().paused = true
+	
+		await get_tree().create_timer(5).timeout
+		
+		get_tree().paused = false
+		lose_text.visible = false
+		get_tree().call_deferred("reload_current_scene")
+		Globals.reset_global_variables()
+		Globals.level_count = 5
+		
+		
+	if Input.is_action_pressed("quit"):
+		get_tree().quit()

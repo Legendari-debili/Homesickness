@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4uo4ctuvf2w4"
+path="res://.godot/imported/Go Home Ducker.mp3-a8b4fbcf5ba713f0500560e33af695f8.mp3str"
+
+[deps]
+
+source_file="res://SFX/Go Home Ducker.mp3"
+dest_files=["res://.godot/imported/Go Home Ducker.mp3-a8b4fbcf5ba713f0500560e33af695f8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

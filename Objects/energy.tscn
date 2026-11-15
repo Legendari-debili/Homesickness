@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cmyevy1kbcfnw"]
 
 [ext_resource type="Script" uid="uid://brh2u6uhcjv4y" path="res://Scripts/energy.gd" id="1_if8s4"]
-[ext_resource type="Texture2D" uid="uid://c8f1vncca7j55" path="res://Images/energy_icon.png" id="1_ql0ev"]
+[ext_resource type="Texture2D" uid="uid://cp5npv4dm3v6w" path="res://Images/ep.png" id="2_265in"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1ekc"]
 size = Vector2(25, 48)
@@ -10,7 +10,8 @@ size = Vector2(25, 48)
 script = ExtResource("1_if8s4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=370554354]
-texture = ExtResource("1_ql0ev")
+position = Vector2(2, 2)
+texture = ExtResource("2_265in")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=664817541]
 position = Vector2(0.5, 1)

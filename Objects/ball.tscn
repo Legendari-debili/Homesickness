@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://k4brlpxyg81a"]
 
-[ext_resource type="Script" uid="uid://c01g7lm52nvr8" path="res://character_body_2d.gd" id="1_41u45"]
-[ext_resource type="Texture2D" uid="uid://c4m2gugbqyyww" path="res://icon.svg" id="2_ktgx5"]
+[ext_resource type="Script" uid="uid://c01g7lm52nvr8" path="res://Scripts/character_body_2d.gd" id="1_41u45"]
+[ext_resource type="Texture2D" uid="uid://8ynfhi5qwqmt" path="res://Images/debils.png" id="2_ogllh"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5ck1e"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_41u45"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1299786430]
 script = ExtResource("1_41u45")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1825733889]
-scale = Vector2(0.16, 0.16)
-texture = ExtResource("2_ktgx5")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_ogllh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=440127817]
-shape = SubResource("CircleShape2D_5ck1e")
+shape = SubResource("CircleShape2D_41u45")
 
 [node name="Camera2D" type="Camera2D" parent="CollisionShape2D" unique_id=1248758810]

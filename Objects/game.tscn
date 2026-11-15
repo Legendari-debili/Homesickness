@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cvcdxm66k3ha6"]
+
+[ext_resource type="Script" uid="uid://bh1w0rmesvx81" path="res://Scripts/game.gd" id="1_m6s4v"]
+[ext_resource type="PackedScene" uid="uid://k4brlpxyg81a" path="res://Objects/ball.tscn" id="2_mu4qh"]
+[ext_resource type="Script" uid="uid://b7s0lkftcn5o3" path="res://Scripts/label.gd" id="3_o2f4f"]
+[ext_resource type="Texture2D" uid="uid://7rwhxd2dagvg" path="res://Images/heart.png" id="4_mu4qh"]
+[ext_resource type="PackedScene" uid="uid://ccbxhu3ii3kkq" path="res://Levels/level1.tscn" id="5_o2f4f"]
+[ext_resource type="Texture2D" uid="uid://bf5e2hg6p1bd3" path="res://Images/Firefly_RemoveBackground.png" id="6_ifunt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ck1e"]
+size = Vector2(480, 17)
+
+[node name="Game" type="Node2D" unique_id=29251854]
+script = ExtResource("1_m6s4v")
+
+[node name="Player" parent="." unique_id=1299786430 instance=ExtResource("2_mu4qh")]
+position = Vector2(0, -100)
+scale = Vector2(3, 3)
+
+[node name="EPLabel" type="Label" parent="Player" unique_id=1836899178]
+offset_left = -186.66667
+offset_top = -107.00001
+offset_right = -146.66667
+offset_bottom = -84.00001
+text = "EP:"
+script = ExtResource("3_o2f4f")
+
+[node name="Life3" type="TextureRect" parent="Player" unique_id=1015162492]
+offset_left = 148.66666
+offset_top = -107.66667
+offset_right = 192.11224
+offset_bottom = -64.66667
+texture = ExtResource("4_mu4qh")
+expand_mode = 1
+
+[node name="Life2" type="TextureRect" parent="Player" unique_id=368658369]
+offset_left = 111.0
+offset_top = -108.333336
+offset_right = 154.44559
+offset_bottom = -65.333336
+texture = ExtResource("4_mu4qh")
+expand_mode = 1
+
+[node name="Life1" type="TextureRect" parent="Player" unique_id=1142766488]
+offset_left = 73.666664
+offset_top = -107.66667
+offset_right = 117.11224
+offset_bottom = -64.66667
+texture = ExtResource("4_mu4qh")
+expand_mode = 1
+
+[node name="TileMapLayer" parent="." unique_id=858672923 instance=ExtResource("5_o2f4f")]
+
+[node name="HouseHouse" type="Sprite2D" parent="." unique_id=1346471003]
+show_behind_parent = true
+position = Vector2(243, -77.00001)
+scale = Vector2(0.2, 0.2)
+skew = 0.3630285
+texture = ExtResource("6_ifunt")
+
+[node name="HomeArea" type="Area2D" parent="." unique_id=1250173946]
+
+[node name="Hitbox" type="CollisionShape2D" parent="HomeArea" unique_id=1083066744]
+position = Vector2(240, -8.5)
+shape = SubResource("RectangleShape2D_5ck1e")

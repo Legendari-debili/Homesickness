@@ -3,3 +3,8 @@ so he wants to return back home from his journey. Help him reach the end wall an
 The journey gets lengthier and lengthier, so it will be more difficult, but more rewarding to reach the end and return.
 
 Controls: A & D - move left and right, respectively; W or Space - launch;  Escape - quit
+
+Credits:
+- @Rubix_Dev1 - programmer, game designer
+- @sudigs-panks - artist
+- itch.io link: https://sudigs-panks.itch.io/homesickness

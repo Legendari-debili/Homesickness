@@ -44,7 +44,7 @@ func _process(_delta: float) -> void:
 		lose_text.visible = false
 		get_tree().call_deferred("reload_current_scene")
 		Globals.reset_global_variables()
-		Globals.level_count = 5
+		Globals.level_count = 3
 		
 		
 	if Input.is_action_pressed("quit"):

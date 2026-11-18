@@ -2,10 +2,12 @@ extends CharacterBody2D
 
 const JUMP_VELOCITY := 30.0
 const SPEED := 50.0
-const LOST_ENERGY_PER_BOUNCE := 1
+const LOST_EP_PER_BOUNCE := 1
+const LOST_EP_PER_LAUNCH := LOST_EP_PER_BOUNCE * 2
 
 @onready var balls_plus_audio = $BallsPlus
 @onready var launch_audio = $Launch
+@onready var ep_label = $EPLabel
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -14,11 +16,11 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		if Input.is_action_pressed("launch"):
 			velocity.y = -(Globals.ep * JUMP_VELOCITY * 2)
-			Globals.ep = clamp(Globals.ep - (LOST_ENERGY_PER_BOUNCE * 2), 0, INF)
+			Globals.ep = clamp(Globals.ep - LOST_EP_PER_LAUNCH, 0, INF)
 			launch_audio.play()
 		else:
 			velocity.y = -(Globals.ep * JUMP_VELOCITY)
-			Globals.ep = clamp(Globals.ep - LOST_ENERGY_PER_BOUNCE, 0, INF)
+			Globals.ep = clamp(Globals.ep - LOST_EP_PER_BOUNCE, 0, INF)
 			balls_plus_audio.play()
 
 	var direction := Input.get_axis("left", "right")
@@ -46,6 +48,6 @@ func _process(_delta: float) -> void:
 		Globals.reset_global_variables()
 		Globals.level_count = 3
 		
-		
-	if Input.is_action_pressed("quit"):
-		get_tree().quit()
+	if Input.is_action_pressed("quit"): get_tree().quit()
+	
+	ep_label.text = "EP: " + str(Globals.ep) + "\nLevels: " + str(Globals.level_count)

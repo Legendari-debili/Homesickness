@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bh1w0rmesvx81" path="res://Scripts/game.gd" id="1_m6s4v"]
 [ext_resource type="PackedScene" uid="uid://k4brlpxyg81a" path="res://Objects/ball.tscn" id="2_mu4qh"]
-[ext_resource type="Script" uid="uid://b7s0lkftcn5o3" path="res://Scripts/label.gd" id="3_o2f4f"]
 [ext_resource type="PackedScene" uid="uid://ccbxhu3ii3kkq" path="res://Levels/level1.tscn" id="5_o2f4f"]
 [ext_resource type="AudioStream" uid="uid://bbomv4x4a6jt6" path="res://SFX/balls_plus.mp3" id="5_o4phl"]
 [ext_resource type="AudioStream" uid="uid://c376iohg1y0xl" path="res://SFX/launch.mp3" id="6_34uq3"]
@@ -33,7 +32,6 @@ offset_bottom = -84.00001
 theme_override_constants/line_spacing = -5
 text = "EP: 
 Levels: "
-script = ExtResource("3_o2f4f")
 
 [node name="BallsPlus" type="AudioStreamPlayer2D" parent="Player" unique_id=1130543134]
 stream = ExtResource("5_o4phl")

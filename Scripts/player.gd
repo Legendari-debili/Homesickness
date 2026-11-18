@@ -38,6 +38,7 @@ func _process(_delta: float) -> void:
 	
 		lose_text.visible = true
 		lose_sound.play()
+		if Globals.ep == 0: stats_label.text = "EP: 0\nLevels: " + str(Globals.level_count)
 		get_tree().paused = true
 	
 		await get_tree().create_timer(5).timeout

@@ -5,7 +5,7 @@ const LEVEL_LENGTH_TILES := 10
 const LEVEL_LENGTH_PX := TILE_SIZE_PX * LEVEL_LENGTH_TILES
 var level_pos := Vector2(0, 0)
 
-@onready var home_area = $HomeArea
+@onready var home_area = $HouseHouse/HomeArea
 @onready var player = $Player
 
 const LEVELS = [

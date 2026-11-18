@@ -101,10 +101,13 @@ scale = Vector2(0.5, 0.5)
 skew = 0.34906584
 texture = ExtResource("6_ifunt")
 
-[node name="HomeArea" type="Area2D" parent="." unique_id=1250173946]
+[node name="HomeArea" type="Area2D" parent="HouseHouse" unique_id=1250173946]
+position = Vector2(-466.853, 178.78186)
+scale = Vector2(2, 2.2493987)
+skew = -0.32954824
 script = ExtResource("13_ph1u7")
 
-[node name="Hitbox" type="CollisionShape2D" parent="HomeArea" unique_id=117488913]
+[node name="Hitbox" type="CollisionShape2D" parent="HouseHouse/HomeArea" unique_id=117488913]
 position = Vector2(252.00255, -79.79483)
 scale = Vector2(1, 0.9999999)
 skew = 0.34906566

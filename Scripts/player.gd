@@ -7,7 +7,7 @@ const LOST_EP_PER_LAUNCH := LOST_EP_PER_BOUNCE * 2
 
 @onready var balls_plus_audio = $BallsPlus
 @onready var launch_audio = $Launch
-@onready var ep_label = $EPLabel
+@onready var stats_label = $StatsLabel
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -42,12 +42,12 @@ func _process(_delta: float) -> void:
 	
 		await get_tree().create_timer(5).timeout
 		
-		get_tree().paused = false
 		lose_text.visible = false
+		get_tree().paused = false
 		get_tree().call_deferred("reload_current_scene")
 		Globals.reset_global_variables()
 		Globals.level_count = 3
 		
 	if Input.is_action_pressed("quit"): get_tree().quit()
 	
-	ep_label.text = "EP: " + str(Globals.ep) + "\nLevels: " + str(Globals.level_count)
+	stats_label.text = "EP: " + str(Globals.ep) + "\nLevels: " + str(Globals.level_count)

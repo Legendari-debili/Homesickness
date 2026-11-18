@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bh1w0rmesvx81" path="res://Scripts/game.gd" id="1_m6s4v"]
 [ext_resource type="PackedScene" uid="uid://k4brlpxyg81a" path="res://Objects/ball.tscn" id="2_mu4qh"]
+[ext_resource type="FontFile" uid="uid://dletofr8xn4rs" path="res://Miscellaneous/DiabolikFont.ttf" id="3_sx1sf"]
 [ext_resource type="PackedScene" uid="uid://ccbxhu3ii3kkq" path="res://Levels/level1.tscn" id="5_o2f4f"]
 [ext_resource type="AudioStream" uid="uid://bbomv4x4a6jt6" path="res://SFX/balls_plus.mp3" id="5_o4phl"]
 [ext_resource type="AudioStream" uid="uid://c376iohg1y0xl" path="res://SFX/launch.mp3" id="6_34uq3"]
@@ -24,12 +25,16 @@ script = ExtResource("1_m6s4v")
 position = Vector2(0, -30)
 scale = Vector2(3, 3)
 
-[node name="EPLabel" type="Label" parent="Player" unique_id=1836899178]
-offset_left = -186.66667
-offset_top = -107.00001
-offset_right = -146.66667
-offset_bottom = -84.00001
+[node name="StatsLabel" type="Label" parent="Player" unique_id=1836899178]
+offset_left = -187.0
+offset_top = -103.33333
+offset_right = -111.66667
+offset_bottom = -65.33333
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = -5
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_sx1sf")
+theme_override_font_sizes/font_size = 32
 text = "EP: 
 Levels: "
 

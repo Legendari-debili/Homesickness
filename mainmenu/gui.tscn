@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://dc7t86lac6uc7"]
+
+[ext_resource type="Script" uid="uid://bkg1dwsdju3sf" path="res://control.gd" id="1_rm1qu"]
+[ext_resource type="Texture2D" uid="uid://bjstm7pqqbmwm" path="res://Images/2026_11_19_0w4_Kleki.png" id="2_geyyq"]
+[ext_resource type="Texture2D" uid="uid://37r36xmds8uc" path="res://Images/FUCKOFF.png" id="3_geyyq"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_otesl"]
+load_path = "res://.godot/imported/newstart.png-801cd5dada6715a506e7d9db7ede3fb5.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_geyyq"]
+load_path = "res://.godot/imported/Credits.png-ad08838a89510c75fee429b3312fed0a.ctex"
+
+[node name="Control" type="Control" unique_id=366666804]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rm1qu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=419865128]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.23529412, 1, 0.019607844, 1)
+
+[node name="Button" type="Button" parent="." unique_id=524980943]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 353.0
+offset_right = 745.0
+offset_bottom = 557.0
+icon = SubResource("CompressedTexture2D_otesl")
+expand_icon = true
+
+[node name="202611190w4Kleki" type="Sprite2D" parent="." unique_id=1999105319]
+position = Vector2(588, 192)
+scale = Vector2(1.4140002, 1.444)
+texture = ExtResource("2_geyyq")
+
+[node name="Button2" type="Button" parent="." unique_id=1659181457]
+layout_mode = 0
+offset_left = 1090.0
+offset_top = 4.0
+offset_right = 1148.0
+offset_bottom = 62.0
+icon = ExtResource("3_geyyq")
+
+[node name="Button3" type="Button" parent="." unique_id=812209503]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 539.0
+offset_right = 1143.0
+offset_bottom = 645.0
+button_mask = 3
+icon = SubResource("CompressedTexture2D_geyyq")
+expand_icon = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_exit_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

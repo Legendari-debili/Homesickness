@@ -3,7 +3,8 @@ extends CharacterBody2D
 const JUMP_VELOCITY := 30.0
 const SPEED := 50.0
 const LOST_EP_PER_BOUNCE := 1
-const LOST_EP_PER_LAUNCH := LOST_EP_PER_BOUNCE * 2
+const LAUNCH_LOSS_COEFFICIENT := 2
+const LOST_EP_PER_LAUNCH := LOST_EP_PER_BOUNCE * LAUNCH_LOSS_COEFFICIENT
 
 @onready var balls_plus_audio = $BallsPlus
 @onready var launch_audio = $Launch
@@ -15,7 +16,7 @@ func _physics_process(delta: float) -> void:
 
 	if is_on_floor():
 		if Input.is_action_pressed("launch"):
-			velocity.y = -(Globals.ep * JUMP_VELOCITY * 2)
+			velocity.y = -(Globals.ep * JUMP_VELOCITY * LAUNCH_LOSS_COEFFICIENT)
 			Globals.ep = clamp(Globals.ep - LOST_EP_PER_LAUNCH, 0, INF)
 			launch_audio.play()
 		else:
@@ -50,5 +51,5 @@ func _process(_delta: float) -> void:
 		Globals.level_count = 3
 		
 	if Input.is_action_pressed("quit"): get_tree().quit()
-	
+	# Use f-strings if they exist in GDScript
 	stats_label.text = "EP: " + str(Globals.ep) + "\nLevels: " + str(Globals.level_count)

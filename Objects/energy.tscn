@@ -6,13 +6,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l1ekc"]
 size = Vector2(25, 48)
 
-[node name="Area2D" type="Area2D" unique_id=2116638701]
+[node name="EPArea" type="Area2D" unique_id=2116638701]
 script = ExtResource("1_if8s4")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=370554354]
+[node name="Image" type="Sprite2D" parent="." unique_id=370554354]
 position = Vector2(2, 2)
 texture = ExtResource("2_265in")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=664817541]
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=664817541]
 position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_l1ekc")

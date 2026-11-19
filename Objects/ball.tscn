@@ -5,14 +5,14 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_41u45"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1299786430]
+[node name="Body" type="CharacterBody2D" unique_id=1299786430]
 script = ExtResource("1_41u45")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1825733889]
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_ogllh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=440127817]
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=440127817]
 shape = SubResource("CircleShape2D_41u45")
 
-[node name="Camera2D" type="Camera2D" parent="CollisionShape2D" unique_id=1248758810]
+[node name="Camera" type="Camera2D" parent="Hitbox" unique_id=1248758810]

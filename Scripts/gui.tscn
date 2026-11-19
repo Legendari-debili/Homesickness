@@ -2,9 +2,13 @@
 
 [ext_resource type="Script" uid="uid://bkg1dwsdju3sf" path="res://control.gd" id="1_rm1qu"]
 [ext_resource type="Texture2D" uid="uid://bjstm7pqqbmwm" path="res://Images/2026_11_19_0w4_Kleki.png" id="2_geyyq"]
+[ext_resource type="Texture2D" uid="uid://37r36xmds8uc" path="res://Images/FUCKOFF.png" id="3_geyyq"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_otesl"]
 load_path = "res://.godot/imported/newstart.png-801cd5dada6715a506e7d9db7ede3fb5.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_geyyq"]
+load_path = "res://.godot/imported/Credits.png-ad08838a89510c75fee429b3312fed0a.ctex"
 
 [node name="Control" type="Control" unique_id=366666804]
 layout_mode = 3
@@ -38,4 +42,24 @@ position = Vector2(588, 192)
 scale = Vector2(1.4140002, 1.444)
 texture = ExtResource("2_geyyq")
 
+[node name="Button2" type="Button" parent="." unique_id=1659181457]
+layout_mode = 0
+offset_left = 1090.0
+offset_top = 4.0
+offset_right = 1148.0
+offset_bottom = 62.0
+icon = ExtResource("3_geyyq")
+
+[node name="Button3" type="Button" parent="." unique_id=812209503]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 539.0
+offset_right = 1143.0
+offset_bottom = 645.0
+button_mask = 3
+icon = SubResource("CompressedTexture2D_geyyq")
+expand_icon = true
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_exit_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

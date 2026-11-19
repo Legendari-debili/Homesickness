@@ -14,4 +14,5 @@ Credits:
 - @sudigs-panks - artist, game designer, publisher
 - itch.io link: https://sudigs-panks.itch.io/homesickness
 - This project was made thanks to Hack Club Haven (2026-11-14 and 2026-11-15)! Thanks to the Riga organizers for holding such an event!
+
 (EP means eiropian parlament) - @sudigs-panks

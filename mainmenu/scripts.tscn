@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d35wyycxwl60w"]
 
-[ext_resource type="Script" uid="uid://dxcf4lairfebj" path="res://Levels/scripts.gd" id="1_t1rpn"]
-[ext_resource type="Texture2D" uid="uid://knqfh0q0peou" path="res://Images/BACK.png" id="2_mku0r"]
+[ext_resource type="Script" uid="uid://dxcf4lairfebj" path="res://mainmenu/scripts.gd" id="1_sxu6v"]
+[ext_resource type="Texture2D" uid="uid://knqfh0q0peou" path="res://Images/BACK.png" id="2_l47o3"]
 
 [node name="Control" type="Control" unique_id=674740955]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_t1rpn")
+script = ExtResource("1_sxu6v")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1535101512]
 layout_mode = 1
@@ -40,7 +40,7 @@ offset_left = 935.0
 offset_top = 546.0
 offset_right = 1292.0
 offset_bottom = 649.0
-icon = ExtResource("2_mku0r")
+icon = ExtResource("2_l47o3")
 expand_icon = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

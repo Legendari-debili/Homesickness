@@ -10,6 +10,10 @@ const LOST_EP_PER_LAUNCH := LOST_EP_PER_BOUNCE * LAUNCH_LOSS_COEFFICIENT
 @onready var launch_audio = $Launch
 @onready var stats_label = $StatsLabel
 
+@onready var main_menu_button = $MainMenuButton
+@onready var resume_button = $ResumeButton
+@onready var pause_label = $PauseLabel
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -49,7 +53,22 @@ func _process(_delta: float) -> void:
 		get_tree().call_deferred("reload_current_scene")
 		Globals.reset_global_variables()
 		Globals.level_count = 3
-		
-	if Input.is_action_pressed("quit"): get_tree().quit()
-	# Use f-strings if they exist in GDScript
+	
 	stats_label.text = "EP: " + str(Globals.ep) + "\nLevels: " + str(Globals.level_count)
+	
+	if Input.is_action_pressed("pause"):
+		get_tree().paused = true
+		main_menu_button.visible = true
+		resume_button.visible = true
+		pause_label.visible = true
+
+func _on_main_menu_pressed() -> void:
+	Globals.reset_global_variables(true)
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://Scenes/MainMenu/gui.tscn")
+
+func _on_resume_button_pressed() -> void:
+	get_tree().paused = false
+	main_menu_button.visible = false
+	resume_button.visible = false
+	pause_label.visible = false

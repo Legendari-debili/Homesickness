@@ -9,18 +9,18 @@ var level_pos := Vector2(0, 0)
 @onready var player = $Player
 
 const LEVELS = [
-	[preload("res://Levels/level1.tscn"), preload("res://Levels/level1e.tscn")],
-	[preload("res://Levels/level2.tscn"), preload("res://Levels/level2e.tscn")],
-	[preload("res://Levels/level3.tscn"), preload("res://Levels/level3e.tscn")],
-	[preload("res://Levels/level4.tscn"), preload("res://Levels/level4e.tscn")],
-	[preload("res://Levels/level5.tscn"), preload("res://Levels/level5e.tscn")],
-	[preload("res://Levels/level6.tscn")],
-	[preload("res://Levels/level7.tscn"), preload("res://Levels/level7e.tscn")],
-	[preload("res://Levels/level8.tscn"), preload("res://Levels/level8e.tscn")],
-	[preload("res://Levels/level9.tscn"), preload("res://Levels/level9e.tscn")],
+	[preload("res://Scenes/Levels/level1.tscn"), preload("res://Scenes/Levels/level1e.tscn")],
+	[preload("res://Scenes/Levels/level2.tscn"), preload("res://Scenes/Levels/level2e.tscn")],
+	[preload("res://Scenes/Levels/level3.tscn"), preload("res://Scenes/Levels/level3e.tscn")],
+	[preload("res://Scenes/Levels/level4.tscn"), preload("res://Scenes/Levels/level4e.tscn")],
+	[preload("res://Scenes/Levels/level5.tscn"), preload("res://Scenes/Levels/level5e.tscn")],
+	[preload("res://Scenes/Levels/level6.tscn")],
+	[preload("res://Scenes/Levels/level7.tscn"), preload("res://Scenes/Levels/level7e.tscn")],
+	[preload("res://Scenes/Levels/level8.tscn"), preload("res://Scenes/Levels/level8e.tscn")],
+	[preload("res://Scenes/Levels/level9.tscn"), preload("res://Scenes/Levels/level9e.tscn")],
 ]
 
-const END = preload("res://Levels/end.tscn")
+const END = preload("res://Scenes/Levels/end.tscn")
 
 func create_level(level: Resource, pos: Vector2) -> void:
 	var scene = level.instantiate()

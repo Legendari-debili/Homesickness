@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bh1w0rmesvx81" path="res://Scripts/game.gd" id="1_m6s4v"]
 [ext_resource type="PackedScene" uid="uid://k4brlpxyg81a" path="res://Objects/ball.tscn" id="2_mu4qh"]
 [ext_resource type="FontFile" uid="uid://dletofr8xn4rs" path="res://Miscellaneous/DiabolikFont.ttf" id="3_sx1sf"]
-[ext_resource type="PackedScene" uid="uid://ccbxhu3ii3kkq" path="res://Levels/level1.tscn" id="5_o2f4f"]
+[ext_resource type="PackedScene" uid="uid://ccbxhu3ii3kkq" path="res://Scenes/Levels/level1.tscn" id="5_o2f4f"]
 [ext_resource type="AudioStream" uid="uid://bbomv4x4a6jt6" path="res://SFX/balls_plus.mp3" id="5_o4phl"]
 [ext_resource type="AudioStream" uid="uid://c376iohg1y0xl" path="res://SFX/launch.mp3" id="6_34uq3"]
 [ext_resource type="Texture2D" uid="uid://bf5e2hg6p1bd3" path="res://Images/Firefly_RemoveBackground.png" id="6_ifunt"]

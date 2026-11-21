@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://cvcdxm66k3ha6"]
 
 [ext_resource type="Script" uid="uid://bh1w0rmesvx81" path="res://Scripts/game.gd" id="1_m6s4v"]
-[ext_resource type="PackedScene" uid="uid://k4brlpxyg81a" path="res://Objects/ball.tscn" id="2_mu4qh"]
+[ext_resource type="PackedScene" uid="uid://k4brlpxyg81a" path="res://Scenes/Objects/ball.tscn" id="2_mu4qh"]
 [ext_resource type="FontFile" uid="uid://dletofr8xn4rs" path="res://Miscellaneous/Diabolik.ttf" id="3_sx1sf"]
 [ext_resource type="PackedScene" uid="uid://ccbxhu3ii3kkq" path="res://Scenes/Levels/level1.tscn" id="5_o2f4f"]
 [ext_resource type="AudioStream" uid="uid://bbomv4x4a6jt6" path="res://SFX/balls_plus.mp3" id="5_o4phl"]

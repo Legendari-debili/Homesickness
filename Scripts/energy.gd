@@ -6,7 +6,7 @@ func _on_body_entered(body: Node) -> void:
 	if body.name != "Player": return
 	
 	Globals.ep += GIVEN_ENERGY
-	body.find_child("EPGain").play()
+	body.find_child("EPGainAudio").play()
 	queue_free()
 	
 func _ready() -> void:

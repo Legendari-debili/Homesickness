@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb0bbefgtu54p"
-path="res://.godot/imported/GoHomeDucker.png-cea1c7f1a70b3e065681f35d8209710f.ctex"
+uid="uid://bjstm7pqqbmwm"
+path="res://.godot/imported/title.png-4ddfb1b868d13465a2b096df9a33f75b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/GoHomeDucker.png"
-dest_files=["res://.godot/imported/GoHomeDucker.png-cea1c7f1a70b3e065681f35d8209710f.ctex"]
+source_file="res://Images/Text/title.png"
+dest_files=["res://.godot/imported/title.png-4ddfb1b868d13465a2b096df9a33f75b.ctex"]
 
 [params]
 

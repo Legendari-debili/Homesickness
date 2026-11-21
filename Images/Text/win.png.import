@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8ynfhi5qwqmt"
-path="res://.godot/imported/debils.png-afc8288d47ad436706b8832456044400.ctex"
+uid="uid://gocn1jvg3j3m"
+path="res://.godot/imported/win.png-b72774609590bf11595e68a52421fc66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/debils.png"
-dest_files=["res://.godot/imported/debils.png-afc8288d47ad436706b8832456044400.ctex"]
+source_file="res://Images/Text/win.png"
+dest_files=["res://.godot/imported/win.png-b72774609590bf11595e68a52421fc66.ctex"]
 
 [params]
 

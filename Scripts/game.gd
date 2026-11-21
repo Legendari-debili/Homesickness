@@ -27,7 +27,6 @@ func create_level(level: Resource, pos: Vector2) -> void:
 	scene.global_position = pos
 	add_child(scene)
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in range(1, Globals.level_count):
 		var picked_level = LEVELS.pick_random().pick_random()

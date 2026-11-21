@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://37r36xmds8uc"
-path="res://.godot/imported/FUCKOFF.png-72fd4150baed7973baeadbe798f25013.ctex"
+uid="uid://bf5e2hg6p1bd3"
+path="res://.godot/imported/HouseHouse.png-9887400b3c4dafb2d134afb78e18dd56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/FUCKOFF.png"
-dest_files=["res://.godot/imported/FUCKOFF.png-72fd4150baed7973baeadbe798f25013.ctex"]
+source_file="res://Images/HouseHouse.png"
+dest_files=["res://.godot/imported/HouseHouse.png-9887400b3c4dafb2d134afb78e18dd56.ctex"]
 
 [params]
 

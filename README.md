@@ -7,7 +7,7 @@ The journey gets lengthier and lengthier, so it will be more difficult, but more
 Controls:
 - A & D - move left and right, respectively;
 - W or Space - launch;
-- Escape - quit
+- Escape - pause
 
 Credits:
 - @Rubix_Dev1 - programmer, game & ui designer

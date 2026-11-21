@@ -1,6 +1,6 @@
 extends Node
 
-var ep := 75
+var ep := 15
 var pos_y := 0
 var level_count := 3
 var in_game := false

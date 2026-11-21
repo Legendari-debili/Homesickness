@@ -21,6 +21,7 @@ Globals="*uid://dktrrra7748gm"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -59,3 +60,4 @@ quit={
 
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.007843138, 0.8, 1, 1)

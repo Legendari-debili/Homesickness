@@ -1,12 +1,22 @@
 [gd_scene format=4 uid="uid://cvcdxm66k3ha6"]
 
 [ext_resource type="Script" uid="uid://bh1w0rmesvx81" path="res://Scripts/game.gd" id="1_m6s4v"]
+[ext_resource type="Texture2D" uid="uid://ciiglbmt5atgd" path="res://Images/PARALAX/ass.png" id="2_exi56"]
 [ext_resource type="PackedScene" uid="uid://k4brlpxyg81a" path="res://Objects/ball.tscn" id="2_mu4qh"]
+[ext_resource type="Texture2D" uid="uid://bosrws7vlk8c1" path="res://Images/PARALAX/DREAMS.png" id="3_exi56"]
 [ext_resource type="FontFile" uid="uid://dletofr8xn4rs" path="res://Miscellaneous/DiabolikFont.ttf" id="3_sx1sf"]
+<<<<<<< Updated upstream:Objects/game.tscn
 [ext_resource type="PackedScene" uid="uid://ccbxhu3ii3kkq" path="res://Levels/level1.tscn" id="5_o2f4f"]
+=======
+[ext_resource type="Texture2D" uid="uid://lcmy8nfcxiuk" path="res://Images/PARALAX/TITS.png" id="4_7t8sx"]
+[ext_resource type="Texture2D" uid="uid://b6k1slw6oqat7" path="res://Images/PARALAX/FUCKINGDREAMS.png" id="4_exi56"]
+[ext_resource type="Texture2D" uid="uid://e8iqro1el3uw" path="res://Images/PARALAX/MORNINGWOOD@.png" id="5_mg4q0"]
+[ext_resource type="PackedScene" uid="uid://ccbxhu3ii3kkq" path="res://Scenes/Levels/level1.tscn" id="5_o2f4f"]
+>>>>>>> Stashed changes:Scenes/game.tscn
 [ext_resource type="AudioStream" uid="uid://bbomv4x4a6jt6" path="res://SFX/balls_plus.mp3" id="5_o4phl"]
 [ext_resource type="AudioStream" uid="uid://c376iohg1y0xl" path="res://SFX/launch.mp3" id="6_34uq3"]
 [ext_resource type="Texture2D" uid="uid://bf5e2hg6p1bd3" path="res://Images/Firefly_RemoveBackground.png" id="6_ifunt"]
+[ext_resource type="Texture2D" uid="uid://doql4lq8jof8k" path="res://Images/PARALAX/morningwood.png" id="6_vm72l"]
 [ext_resource type="Texture2D" uid="uid://cb0bbefgtu54p" path="res://Images/GoHomeDucker.png" id="7_34uq3"]
 [ext_resource type="AudioStream" uid="uid://dnchh4gk6y1t2" path="res://SFX/lose.mp3" id="8_b34l5"]
 [ext_resource type="AudioStream" uid="uid://c1vq45im7b2sp" path="res://SFX/win.mp3" id="9_wuqr1"]
@@ -21,6 +31,97 @@ size = Vector2(233.61032, 170.70511)
 
 [node name="Game" type="Node2D" unique_id=29251854]
 script = ExtResource("1_m6s4v")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=277272442]
+position = Vector2(0, 10)
+
+[node name="Parallax2D" type="Parallax2D" parent="Node2D" unique_id=280087001]
+scroll_scale = Vector2(0.9, 0.85)
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/Parallax2D" unique_id=1980612773]
+z_index = -3
+position = Vector2(5, -5.4999924)
+scale = Vector2(1, 0.906)
+texture = ExtResource("2_exi56")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Node2D" unique_id=763459277]
+scroll_scale = Vector2(0.55, 0.513)
+scroll_offset = Vector2(0, 1)
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Sprite2D2" type="Sprite2D" parent="Node2D/Parallax2D2" unique_id=1924930741]
+z_index = -1
+position = Vector2(-251.99998, -322.99997)
+scale = Vector2(1.296, 1.2959999)
+texture = ExtResource("3_exi56")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Node2D" unique_id=866935649]
+scroll_scale = Vector2(0.6, 0.563)
+scroll_offset = Vector2(0, 1)
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D/Parallax2D3" unique_id=95040570]
+z_index = -1
+position = Vector2(-252.00002, -328.00003)
+scale = Vector2(1.296, 1.296)
+texture = ExtResource("4_exi56")
+
+[node name="Parallax2D4" type="Parallax2D" parent="Node2D" unique_id=1845088078]
+scroll_scale = Vector2(0.7, 0.659)
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Sprite2D4" type="Sprite2D" parent="Node2D/Parallax2D4" unique_id=654901674]
+z_index = -1
+position = Vector2(-266, -326.99997)
+scale = Vector2(1.296, 1.296)
+texture = ExtResource("4_7t8sx")
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/Parallax2D4/Sprite2D4" unique_id=1013342256]
+z_index = -2
+offset_left = -249.99998
+offset_top = -202.16049
+offset_right = 929.0
+offset_bottom = 246.91357
+color = Color(0.007843138, 0.8, 1, 1)
+
+[node name="Parallax2D5" type="Parallax2D" parent="Node2D" unique_id=1797557021]
+scroll_scale = Vector2(0.85, 0.803)
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Sprite2D5" type="Sprite2D" parent="Node2D/Parallax2D5" unique_id=101831074]
+z_index = -1
+position = Vector2(-252.99998, -325.99997)
+scale = Vector2(1.296, 1.296)
+texture = ExtResource("5_mg4q0")
+
+[node name="Parallax2D6" type="Parallax2D" parent="Node2D" unique_id=2081931930]
+scroll_scale = Vector2(0.9, 0.851)
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Sprite2D6" type="Sprite2D" parent="Node2D/Parallax2D6" unique_id=1769673125]
+z_index = -1
+position = Vector2(-250.99998, -323.99997)
+scale = Vector2(1.296, 1.296)
+texture = ExtResource("6_vm72l")
+
+[node name="Parallax2D7" type="Parallax2D" parent="Node2D" unique_id=688955218]
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/Parallax2D7" unique_id=758830371]
+z_index = -1
+offset_left = -583.0
+offset_top = 35.0
+offset_right = 565.0
+offset_bottom = 291.0
+color = Color(0.007843138, 0.8, 1, 1)
 
 [node name="Player" parent="." unique_id=1299786430 instance=ExtResource("2_mu4qh")]
 position = Vector2(0, -30)

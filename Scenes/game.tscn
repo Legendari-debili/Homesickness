@@ -217,6 +217,7 @@ texture = ExtResource("16_nnt18")
 texture_filter = 1
 scroll_scale = Vector2(0.7, 0.7)
 repeat_size = Vector2(500, 0)
+autoscroll = Vector2(15, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Cloud1" unique_id=1820742627]
@@ -229,6 +230,7 @@ texture = ExtResource("17_7t8sx")
 texture_filter = 1
 scroll_scale = Vector2(0.75, 0.75)
 repeat_size = Vector2(500, 0)
+autoscroll = Vector2(10, 0)
 repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Cloud2" unique_id=1932655238]

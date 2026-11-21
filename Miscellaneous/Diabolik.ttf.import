@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dletofr8xn4rs"
-path="res://.godot/imported/DiabolikFont.ttf-942d4a11a4672e3edb96d3c36880824d.fontdata"
+path="res://.godot/imported/Diabolik.ttf-00fd56f544aee3b1175f9a2db47794d1.fontdata"
 
 [deps]
 
-source_file="res://Miscellaneous/DiabolikFont.ttf"
-dest_files=["res://.godot/imported/DiabolikFont.ttf-942d4a11a4672e3edb96d3c36880824d.fontdata"]
+source_file="res://Miscellaneous/Diabolik.ttf"
+dest_files=["res://.godot/imported/Diabolik.ttf-00fd56f544aee3b1175f9a2db47794d1.fontdata"]
 
 [params]
 
@@ -18,7 +18,7 @@ generate_mipmaps=false
 disable_embedded_bitmaps=true
 multichannel_signed_distance_field=true
 msdf_pixel_range=16
-msdf_size=128
+msdf_size=96
 allow_system_fallback=true
 force_autohinter=false
 modulate_color_glyphs=false

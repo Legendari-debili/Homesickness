@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://jqja2hmsci55"]
 
-[ext_resource type="Texture2D" uid="uid://dkn8vput0lhrh" path="res://Images/Brick.png" id="1_qfntx"]
+[ext_resource type="Texture2D" uid="uid://dkn8vput0lhrh" path="res://Images/brick.png" id="1_qfntx"]
 [ext_resource type="Script" uid="uid://77sdwr8du6av" path="res://Scripts/end_touch.gd" id="2_kalj3"]
 [ext_resource type="PackedScene" uid="uid://cmyevy1kbcfnw" path="res://Objects/energy.tscn" id="3_8a2pq"]
-[ext_resource type="Texture2D" uid="uid://chys021ntvje6" path="res://Images/wall_text.png" id="4_7isrc"]
+[ext_resource type="Texture2D" uid="uid://chys021ntvje6" path="res://Images/Text/wall_text.png" id="4_7isrc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bqim2"]
 texture = ExtResource("1_qfntx")

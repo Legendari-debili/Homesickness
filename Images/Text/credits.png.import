@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmhjhcqcy3gb5"
-path="res://.godot/imported/FUCKINGLOGOSMALLPIPI.png-9a6fde94af18a259eb04c54ab703dd2a.ctex"
+uid="uid://b6fdndyrw2x8b"
+path="res://.godot/imported/credits.png-9f2966654ff646da2ec232e94e9784c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/FUCKINGLOGOSMALLPIPI.png"
-dest_files=["res://.godot/imported/FUCKINGLOGOSMALLPIPI.png-9a6fde94af18a259eb04c54ab703dd2a.ctex"]
+source_file="res://Images/Text/credits.png"
+dest_files=["res://.godot/imported/credits.png-9f2966654ff646da2ec232e94e9784c4.ctex"]
 
 [params]
 

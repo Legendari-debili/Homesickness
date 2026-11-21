@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bsweg1yap8xo7"]
 
-[ext_resource type="Texture2D" uid="uid://dkn8vput0lhrh" path="res://Images/Brick.png" id="1_vft68"]
+[ext_resource type="Texture2D" uid="uid://dkn8vput0lhrh" path="res://Images/brick.png" id="1_vft68"]
 [ext_resource type="PackedScene" uid="uid://cmyevy1kbcfnw" path="res://Objects/energy.tscn" id="2_p3pjj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i4kf4"]

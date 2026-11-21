@@ -2,18 +2,18 @@
 
 [ext_resource type="Script" uid="uid://bh1w0rmesvx81" path="res://Scripts/game.gd" id="1_m6s4v"]
 [ext_resource type="PackedScene" uid="uid://k4brlpxyg81a" path="res://Objects/ball.tscn" id="2_mu4qh"]
-[ext_resource type="FontFile" uid="uid://dletofr8xn4rs" path="res://Miscellaneous/DiabolikFont.ttf" id="3_sx1sf"]
+[ext_resource type="FontFile" uid="uid://dletofr8xn4rs" path="res://Miscellaneous/Diabolik.ttf" id="3_sx1sf"]
 [ext_resource type="PackedScene" uid="uid://ccbxhu3ii3kkq" path="res://Scenes/Levels/level1.tscn" id="5_o2f4f"]
 [ext_resource type="AudioStream" uid="uid://bbomv4x4a6jt6" path="res://SFX/balls_plus.mp3" id="5_o4phl"]
 [ext_resource type="AudioStream" uid="uid://c376iohg1y0xl" path="res://SFX/launch.mp3" id="6_34uq3"]
-[ext_resource type="Texture2D" uid="uid://bf5e2hg6p1bd3" path="res://Images/Firefly_RemoveBackground.png" id="6_ifunt"]
-[ext_resource type="Texture2D" uid="uid://cb0bbefgtu54p" path="res://Images/GoHomeDucker.png" id="7_34uq3"]
+[ext_resource type="Texture2D" uid="uid://bf5e2hg6p1bd3" path="res://Images/HouseHouse.png" id="6_ifunt"]
+[ext_resource type="Texture2D" uid="uid://cb0bbefgtu54p" path="res://Images/Text/go_home_ducker.png" id="7_34uq3"]
 [ext_resource type="AudioStream" uid="uid://dnchh4gk6y1t2" path="res://SFX/lose.mp3" id="8_b34l5"]
 [ext_resource type="AudioStream" uid="uid://c1vq45im7b2sp" path="res://SFX/win.mp3" id="9_wuqr1"]
 [ext_resource type="AudioStream" uid="uid://b4uo4ctuvf2w4" path="res://SFX/Go Home Ducker.mp3" id="10_ph1u7"]
-[ext_resource type="Texture2D" uid="uid://gocn1jvg3j3m" path="res://Images/Win.png" id="11_sx1sf"]
+[ext_resource type="Texture2D" uid="uid://gocn1jvg3j3m" path="res://Images/Text/win.png" id="11_sx1sf"]
 [ext_resource type="AudioStream" uid="uid://ggmm4iu4txtl" path="res://SFX/Eiropas_Parlaments.mp3" id="12_5fn2v"]
-[ext_resource type="Texture2D" uid="uid://bu4drgri02s4q" path="res://Images/lose.png" id="12_qaynj"]
+[ext_resource type="Texture2D" uid="uid://bu4drgri02s4q" path="res://Images/Text/lose.png" id="12_qaynj"]
 [ext_resource type="Script" uid="uid://bfpusqvgvmclj" path="res://Scripts/home_touch.gd" id="13_ph1u7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ck1e"]
@@ -39,10 +39,10 @@ theme_override_font_sizes/font_size = 32
 text = "EP: 
 Levels: "
 
-[node name="BallsPlus" type="AudioStreamPlayer2D" parent="Player" unique_id=1130543134]
+[node name="BounceAudio" type="AudioStreamPlayer2D" parent="Player" unique_id=1130543134]
 stream = ExtResource("5_o4phl")
 
-[node name="Launch" type="AudioStreamPlayer2D" parent="Player" unique_id=1510108722]
+[node name="LaunchAudio" type="AudioStreamPlayer2D" parent="Player" unique_id=1510108722]
 stream = ExtResource("6_34uq3")
 
 [node name="GoHomeDucker" type="TextureRect" parent="Player" unique_id=290249605]
@@ -87,11 +87,11 @@ offset_bottom = 96.66667
 texture = ExtResource("12_qaynj")
 expand_mode = 1
 
-[node name="EPGain" type="AudioStreamPlayer2D" parent="Player" unique_id=912103507]
+[node name="EPGainAudio" type="AudioStreamPlayer2D" parent="Player" unique_id=912103507]
 stream = ExtResource("12_5fn2v")
 volume_db = -10.0
 
-[node name="MainMenuButton" type="Button" parent="Player" unique_id=567163243]
+[node name="MenuButtonPaused" type="Button" parent="Player" unique_id=567163243]
 process_mode = 3
 visible = false
 offset_left = 16.666668
@@ -101,6 +101,28 @@ offset_bottom = 93.66667
 theme_override_fonts/font = ExtResource("3_sx1sf")
 theme_override_font_sizes/font_size = 32
 text = "main menu"
+
+[node name="MenuButtonLost" type="Button" parent="Player" unique_id=410596201]
+process_mode = 3
+visible = false
+offset_left = 53.333336
+offset_top = 32.666668
+offset_right = 155.33334
+offset_bottom = 64.66667
+theme_override_fonts/font = ExtResource("3_sx1sf")
+theme_override_font_sizes/font_size = 24
+text = "main menu"
+
+[node name="TryAgainButton" type="Button" parent="Player" unique_id=1693718843]
+process_mode = 3
+visible = false
+offset_left = 53.333336
+offset_top = 69.0
+offset_right = 155.33334
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("3_sx1sf")
+theme_override_font_sizes/font_size = 24
+text = "try again"
 
 [node name="ResumeButton" type="Button" parent="Player" unique_id=11494051]
 process_mode = 3
@@ -148,5 +170,7 @@ scale = Vector2(1, 0.9999999)
 skew = 0.34906566
 shape = SubResource("RectangleShape2D_5ck1e")
 
-[connection signal="pressed" from="Player/MainMenuButton" to="Player" method="_on_main_menu_pressed"]
-[connection signal="pressed" from="Player/ResumeButton" to="Player" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="Player/MenuButtonPaused" to="Player" method="_on_menu_pressed"]
+[connection signal="pressed" from="Player/MenuButtonLost" to="Player" method="_on_menu_pressed"]
+[connection signal="pressed" from="Player/TryAgainButton" to="Player" method="_on_try_again_pressed"]
+[connection signal="pressed" from="Player/ResumeButton" to="Player" method="_on_resume_pressed"]

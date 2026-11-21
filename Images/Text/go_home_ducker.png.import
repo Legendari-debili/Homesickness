@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://37r36xmds8uc"
-path="res://.godot/imported/FUCKOFF.png-72fd4150baed7973baeadbe798f25013.ctex"
+uid="uid://cb0bbefgtu54p"
+path="res://.godot/imported/go_home_ducker.png-88465d3845d86134129f5fc245be2842.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/FUCKOFF.png"
-dest_files=["res://.godot/imported/FUCKOFF.png-72fd4150baed7973baeadbe798f25013.ctex"]
+source_file="res://Images/Text/go_home_ducker.png"
+dest_files=["res://.godot/imported/go_home_ducker.png-88465d3845d86134129f5fc245be2842.ctex"]
 
 [params]
 

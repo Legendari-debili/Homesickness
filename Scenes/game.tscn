@@ -15,6 +15,13 @@
 [ext_resource type="AudioStream" uid="uid://ggmm4iu4txtl" path="res://SFX/Eiropas_Parlaments.mp3" id="12_5fn2v"]
 [ext_resource type="Texture2D" uid="uid://bu4drgri02s4q" path="res://Images/Text/lose.png" id="12_qaynj"]
 [ext_resource type="Script" uid="uid://bfpusqvgvmclj" path="res://Scripts/home_touch.gd" id="13_ph1u7"]
+[ext_resource type="Texture2D" uid="uid://cvgxtek0w6bb1" path="res://Images/shit/ass.png" id="16_exi56"]
+[ext_resource type="Texture2D" uid="uid://c6k1hphtw23we" path="res://Images/shit/sky.png" id="16_nnt18"]
+[ext_resource type="Texture2D" uid="uid://cxnngckmwfa7a" path="res://Images/shit/DREAMS.png" id="17_7t8sx"]
+[ext_resource type="Texture2D" uid="uid://bn4df03w2ih3e" path="res://Images/shit/FUCKINGDREAMS.png" id="18_mg4q0"]
+[ext_resource type="Texture2D" uid="uid://pcgi2skyeo8v" path="res://Images/shit/TITS.png" id="19_vm72l"]
+[ext_resource type="Texture2D" uid="uid://comlgyakmqjaf" path="res://Images/shit/morningwood.png" id="20_22asu"]
+[ext_resource type="Texture2D" uid="uid://bqesqkm6su3o5" path="res://Images/shit/MORNINGWOOD@.png" id="21_fkdbe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ck1e"]
 size = Vector2(233.61032, 170.70511)
@@ -169,6 +176,103 @@ position = Vector2(252.00255, -79.79483)
 scale = Vector2(1, 0.9999999)
 skew = 0.34906566
 shape = SubResource("RectangleShape2D_5ck1e")
+
+[node name="Background" type="Node2D" parent="." unique_id=1573450610]
+
+[node name="grASS" type="Parallax2D" parent="Background" unique_id=278661736]
+texture_filter = 1
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/grASS" unique_id=1983145989]
+z_index = -1
+position = Vector2(59.000015, -185)
+scale = Vector2(1.288, 1.2759999)
+texture = ExtResource("16_exi56")
+
+[node name="grASS2" type="Parallax2D" parent="Background" unique_id=521193355]
+texture_filter = 1
+scroll_scale = Vector2(0.75, 0.75)
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/grASS2" unique_id=1401187890]
+z_index = -1
+position = Vector2(59.000015, -259.5)
+scale = Vector2(1.288, 0.9779999)
+texture = ExtResource("16_nnt18")
+
+[node name="grASS3" type="Parallax2D" parent="Background" unique_id=1346011740]
+texture_filter = 1
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/grASS3" unique_id=1134815632]
+z_index = -1
+position = Vector2(60, 297.00003)
+scale = Vector2(1.288, 0.9779999)
+texture = ExtResource("16_nnt18")
+
+[node name="Cloud1" type="Parallax2D" parent="Background" unique_id=1022230983]
+texture_filter = 1
+scroll_scale = Vector2(0.7, 0.7)
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Cloud1" unique_id=1820742627]
+z_index = -1
+position = Vector2(-1, -335)
+scale = Vector2(1.288, 1.288)
+texture = ExtResource("17_7t8sx")
+
+[node name="Cloud2" type="Parallax2D" parent="Background" unique_id=713511737]
+texture_filter = 1
+scroll_scale = Vector2(0.75, 0.75)
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Cloud2" unique_id=1932655238]
+z_index = -1
+position = Vector2(1.0000001, -330)
+scale = Vector2(1.288, 1.288)
+texture = ExtResource("18_mg4q0")
+
+[node name="TITS" type="Parallax2D" parent="Background" unique_id=735135287]
+texture_filter = 1
+scroll_scale = Vector2(0.75, 0.75)
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/TITS" unique_id=1318492486]
+z_index = -1
+position = Vector2(7, -327)
+scale = Vector2(1.288, 1.288)
+texture = ExtResource("19_vm72l")
+
+[node name="MORNINGWOOD1" type="Parallax2D" parent="Background" unique_id=1046996608]
+texture_filter = 1
+scroll_scale = Vector2(0.85, 0.85)
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/MORNINGWOOD1" unique_id=54429873]
+z_index = -1
+position = Vector2(1.0000001, -325)
+scale = Vector2(1.288, 1.288)
+texture = ExtResource("20_22asu")
+
+[node name="MORNINGWOOD2" type="Parallax2D" parent="Background" unique_id=1198430945]
+texture_filter = 1
+scroll_scale = Vector2(0.9, 0.9)
+scroll_offset = Vector2(0, 37)
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/MORNINGWOOD2" unique_id=830043685]
+z_index = -1
+position = Vector2(1.0000001, -340)
+scale = Vector2(1.288, 1.288)
+texture = ExtResource("21_fkdbe")
 
 [connection signal="pressed" from="Player/MenuButtonPaused" to="Player" method="_on_menu_pressed"]
 [connection signal="pressed" from="Player/MenuButtonLost" to="Player" method="_on_menu_pressed"]

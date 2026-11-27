@@ -1,8 +1,11 @@
 extends Node
 
+## GLOBAL VARIABLES ##
 var ep := 15
 var pos_y := 0
 var level_count := 3
+
+# Variables which can only be resetted using full_reset #
 var in_game := false
 var touched_end := false
 

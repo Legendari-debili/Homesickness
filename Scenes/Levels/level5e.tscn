@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://c6s6ew0a3yedx"]
+[gd_scene format=4 uid="uid://bxqyc3vg3cgiy"]
 
 [ext_resource type="Texture2D" uid="uid://dkn8vput0lhrh" path="res://Images/brick.png" id="1_anms6"]
 [ext_resource type="PackedScene" uid="uid://cmyevy1kbcfnw" path="res://Scenes/Objects/energy.tscn" id="2_20wfg"]

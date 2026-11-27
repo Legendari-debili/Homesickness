@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(_delta: float) -> void:
-	if position.y >= 500 or Globals.ep == 0:
+	if position.y >= 100 or Globals.ep == 0:
 		lose_label.visible = true
 		lose_audio.play()
 		if Globals.ep == 0: stats_label.text = "EP: 0\nLevels: " + str(Globals.level_count)

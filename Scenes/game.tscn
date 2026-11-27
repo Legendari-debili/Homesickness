@@ -15,6 +15,12 @@
 [ext_resource type="AudioStream" uid="uid://ggmm4iu4txtl" path="res://SFX/Eiropas_Parlaments.mp3" id="12_5fn2v"]
 [ext_resource type="Texture2D" uid="uid://bu4drgri02s4q" path="res://Images/Text/lose.png" id="12_qaynj"]
 [ext_resource type="Script" uid="uid://bfpusqvgvmclj" path="res://Scripts/home_touch.gd" id="13_ph1u7"]
+[ext_resource type="Texture2D" uid="uid://cvgxtek0w6bb1" path="res://Images/shit/ass.png" id="16_exi56"]
+[ext_resource type="Texture2D" uid="uid://cxnngckmwfa7a" path="res://Images/shit/DREAMS.png" id="17_7t8sx"]
+[ext_resource type="Texture2D" uid="uid://bn4df03w2ih3e" path="res://Images/shit/FUCKINGDREAMS.png" id="18_mg4q0"]
+[ext_resource type="Texture2D" uid="uid://pcgi2skyeo8v" path="res://Images/shit/TITS.png" id="19_vm72l"]
+[ext_resource type="Texture2D" uid="uid://comlgyakmqjaf" path="res://Images/shit/morningwood.png" id="20_22asu"]
+[ext_resource type="Texture2D" uid="uid://bqesqkm6su3o5" path="res://Images/shit/MORNINGWOOD@.png" id="21_fkdbe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ck1e"]
 size = Vector2(233.61032, 170.70511)
@@ -148,7 +154,7 @@ theme_override_fonts/font = ExtResource("3_sx1sf")
 theme_override_font_sizes/font_size = 64
 text = "PAUSED"
 
-[node name="TileMapLayer" parent="." unique_id=858672923 instance=ExtResource("5_o2f4f")]
+[node name="Start" parent="." unique_id=858672923 instance=ExtResource("5_o2f4f")]
 tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAEAAAAAAAIAAQAAAAIAAAABAAAAAQABAAAAAAABAAEAAQABAAEAAAABAAIAAQABAAIAAAACAAAAAQACAAAAAAACAAEAAQACAAEAAAACAAIAAQACAAIAAAADAAAAAQAAAAAAAAADAAEAAQAAAAEAAAADAAIAAQAAAAIAAAAEAAAAAQABAAAAAAAEAAEAAQABAAEAAAAEAAIAAQABAAIAAAAFAAAAAQACAAAAAAAFAAEAAQACAAEAAAAFAAIAAQACAAIAAAAGAAAAAQAAAAAAAAAGAAEAAQAAAAEAAAAGAAIAAQAAAAIAAAAHAAAAAQABAAAAAAAHAAEAAQABAAEAAAAHAAIAAQABAAIAAAAIAAAAAQACAAAAAAAIAAEAAQACAAEAAAAIAAIAAQACAAIAAAAJAAAAAQAAAAAAAAAJAAEAAQAAAAEAAAAJAAIAAQAAAAIAAAAKAAAAAQABAAAAAAAKAAEAAQABAAEAAAAKAAIAAQABAAIAAAALAAAAAQACAAAAAAALAAEAAQACAAEAAAALAAIAAQACAAIAAAAMAAAAAQAAAAAAAAAMAAEAAQAAAAEAAAAMAAIAAQAAAAIAAAANAAAAAQABAAAAAAANAAEAAQABAAEAAAANAAIAAQABAAIAAAAOAAAAAQACAAAAAAAOAAEAAQACAAEAAAAOAAIAAQACAAIAAAAPAAAAAQAAAAAAAAAPAAEAAQAAAAEAAAAPAAIAAQAAAAIAAAAQAAAAAQABAAAAAAAQAAEAAQABAAEAAAAQAAIAAQABAAIAAAARAAAAAQACAAAAAAARAAEAAQACAAEAAAARAAIAAQACAAIAAAASAAAAAQAAAAAAAAASAAEAAQAAAAEAAAASAAIAAQAAAAIAAAATAAAAAQABAAAAAAATAAEAAQABAAEAAAATAAIAAQABAAIAAAAUAAAAAQACAAAAAAAUAAEAAQACAAEAAAAUAAIAAQACAAIAAAAVAAAAAQAAAAAAAAAVAAEAAQAAAAEAAAAVAAIAAQAAAAIAAAAWAAAAAQABAAAAAAAWAAEAAQABAAEAAAAWAAIAAQABAAIAAAAXAAAAAQACAAAAAAAXAAEAAQACAAEAAAAXAAIAAQACAAIAAAAYAAAAAQAAAAAAAAAYAAEAAQAAAAEAAAAYAAIAAQAAAAIAAAAZAAAAAQABAAAAAAAZAAEAAQABAAEAAAAZAAIAAQABAAIAAAAaAAAAAQACAAAAAAAaAAEAAQACAAEAAAAaAAIAAQACAAIAAAAbAAAAAQAAAAAAAAAbAAEAAQAAAAEAAAAbAAIAAQAAAAIAAAAcAAAAAQABAAAAAAAcAAEAAQABAAEAAAAcAAIAAQABAAIAAAAdAAAAAQACAAAAAAAdAAEAAQACAAEAAAAdAAIAAQACAAIAAAD9/wAAAQAAAAAAAAD9/wEAAQAAAAEAAAD9/wIAAQAAAAIAAAD+/wAAAQABAAAAAAD+/wEAAQABAAEAAAD+/wIAAQABAAIAAAD//wAAAQACAAAAAAD//wEAAQACAAEAAAD//wIAAQACAAIAAAD6/wAAAQAAAAAAAAD6/wEAAQAAAAEAAAD6/wIAAQAAAAIAAAD7/wAAAQABAAAAAAD7/wEAAQABAAEAAAD7/wIAAQABAAIAAAD8/wAAAQACAAAAAAD8/wEAAQACAAEAAAD8/wIAAQACAAIAAAD6//3/AQAAAAAAAAD6//7/AQAAAAEAAAD6////AQAAAAIAAAD7//3/AQABAAAAAAD7//7/AQABAAEAAAD7////AQABAAIAAAD8//3/AQACAAAAAAD8//7/AQACAAEAAAD8////AQACAAIAAAD6//r/AQAAAAAAAAD6//v/AQAAAAEAAAD6//z/AQAAAAIAAAD7//r/AQABAAAAAAD7//v/AQABAAEAAAD7//z/AQABAAIAAAD8//r/AQACAAAAAAD8//v/AQACAAEAAAD8//z/AQACAAIAAAD6//f/AQAAAAAAAAD6//j/AQAAAAEAAAD6//n/AQAAAAIAAAD7//f/AQABAAAAAAD7//j/AQABAAEAAAD7//n/AQABAAIAAAD8//f/AQACAAAAAAD8//j/AQACAAEAAAD8//n/AQACAAIAAAD6//T/AQAAAAAAAAD6//X/AQAAAAEAAAD6//b/AQAAAAIAAAD7//T/AQABAAAAAAD7//X/AQABAAEAAAD7//b/AQABAAIAAAD8//T/AQACAAAAAAD8//X/AQACAAEAAAD8//b/AQACAAIAAAD6//H/AQAAAAAAAAD6//L/AQAAAAEAAAD6//P/AQAAAAIAAAD7//H/AQABAAAAAAD7//L/AQABAAEAAAD7//P/AQABAAIAAAD8//H/AQACAAAAAAD8//L/AQACAAEAAAD8//P/AQACAAIAAAD6/+7/AQAAAAAAAAD6/+//AQAAAAEAAAD6//D/AQAAAAIAAAD7/+7/AQABAAAAAAD7/+//AQABAAEAAAD7//D/AQABAAIAAAD8/+7/AQACAAAAAAD8/+//AQACAAEAAAD8//D/AQACAAIAAAD6/+v/AQAAAAAAAAD6/+z/AQAAAAEAAAD6/+3/AQAAAAIAAAD7/+v/AQABAAAAAAD7/+z/AQABAAEAAAD7/+3/AQABAAIAAAD8/+v/AQACAAAAAAD8/+z/AQACAAEAAAD8/+3/AQACAAIAAAD6/+j/AQAAAAAAAAD6/+n/AQAAAAEAAAD6/+r/AQAAAAIAAAD7/+j/AQABAAAAAAD7/+n/AQABAAEAAAD7/+r/AQABAAIAAAD8/+j/AQACAAAAAAD8/+n/AQACAAEAAAD8/+r/AQACAAIAAAD6/+X/AQAAAAAAAAD6/+b/AQAAAAEAAAD6/+f/AQAAAAIAAAD7/+X/AQABAAAAAAD7/+b/AQABAAEAAAD7/+f/AQABAAIAAAD8/+X/AQACAAAAAAD8/+b/AQACAAEAAAD8/+f/AQACAAIAAAD6/+L/AQAAAAAAAAD6/+P/AQAAAAEAAAD6/+T/AQAAAAIAAAD7/+L/AQABAAAAAAD7/+P/AQABAAEAAAD7/+T/AQABAAIAAAD8/+L/AQACAAAAAAD8/+P/AQACAAEAAAD8/+T/AQACAAIAAAD6/9//AQAAAAAAAAD6/+D/AQAAAAEAAAD6/+H/AQAAAAIAAAD7/9//AQABAAAAAAD7/+D/AQABAAEAAAD7/+H/AQABAAIAAAD8/9//AQACAAAAAAD8/+D/AQACAAEAAAD8/+H/AQACAAIAAAD6/9z/AQAAAAAAAAD6/93/AQAAAAEAAAD6/97/AQAAAAIAAAD7/9z/AQABAAAAAAD7/93/AQABAAEAAAD7/97/AQABAAIAAAD8/9z/AQACAAAAAAD8/93/AQACAAEAAAD8/97/AQACAAIAAAD6/9n/AQAAAAAAAAD6/9r/AQAAAAEAAAD6/9v/AQAAAAIAAAD7/9n/AQABAAAAAAD7/9r/AQABAAEAAAD7/9v/AQABAAIAAAD8/9n/AQACAAAAAAD8/9r/AQACAAEAAAD8/9v/AQACAAIAAAD6/9b/AQAAAAAAAAD6/9f/AQAAAAEAAAD6/9j/AQAAAAIAAAD7/9b/AQABAAAAAAD7/9f/AQABAAEAAAD7/9j/AQABAAIAAAD8/9b/AQACAAAAAAD8/9f/AQACAAEAAAD8/9j/AQACAAIAAAD6/9P/AQAAAAAAAAD6/9T/AQAAAAEAAAD6/9X/AQAAAAIAAAD7/9P/AQABAAAAAAD7/9T/AQABAAEAAAD7/9X/AQABAAIAAAD8/9P/AQACAAAAAAD8/9T/AQACAAEAAAD8/9X/AQACAAIAAAD6/9D/AQAAAAAAAAD6/9H/AQAAAAEAAAD6/9L/AQAAAAIAAAD7/9D/AQABAAAAAAD7/9H/AQABAAEAAAD7/9L/AQABAAIAAAD8/9D/AQACAAAAAAD8/9H/AQACAAEAAAD8/9L/AQACAAIAAAD6/83/AQAAAAAAAAD6/87/AQAAAAEAAAD6/8//AQAAAAIAAAD7/83/AQABAAAAAAD7/87/AQABAAEAAAD7/8//AQABAAIAAAD8/83/AQACAAAAAAD8/87/AQACAAEAAAD8/8//AQACAAIAAAD6/8r/AQAAAAAAAAD6/8v/AQAAAAEAAAD6/8z/AQAAAAIAAAD7/8r/AQABAAAAAAD7/8v/AQABAAEAAAD7/8z/AQABAAIAAAD8/8r/AQACAAAAAAD8/8v/AQACAAEAAAD8/8z/AQACAAIAAAD6/8f/AQAAAAAAAAD6/8j/AQAAAAEAAAD6/8n/AQAAAAIAAAD7/8f/AQABAAAAAAD7/8j/AQABAAEAAAD7/8n/AQABAAIAAAD8/8f/AQACAAAAAAD8/8j/AQACAAEAAAD8/8n/AQACAAIAAAD6/8T/AQAAAAAAAAD6/8X/AQAAAAEAAAD6/8b/AQAAAAIAAAD7/8T/AQABAAAAAAD7/8X/AQABAAEAAAD7/8b/AQABAAIAAAD8/8T/AQACAAAAAAD8/8X/AQACAAEAAAD8/8b/AQACAAIAAAD6/8H/AQAAAAAAAAD6/8L/AQAAAAEAAAD6/8P/AQAAAAIAAAD7/8H/AQABAAAAAAD7/8L/AQABAAEAAAD7/8P/AQABAAIAAAD8/8H/AQACAAAAAAD8/8L/AQACAAEAAAD8/8P/AQACAAIAAAD6/77/AQAAAAAAAAD6/7//AQAAAAEAAAD6/8D/AQAAAAIAAAD7/77/AQABAAAAAAD7/7//AQABAAEAAAD7/8D/AQABAAIAAAD8/77/AQACAAAAAAD8/7//AQACAAEAAAD8/8D/AQACAAIAAAD6/7v/AQAAAAAAAAD6/7z/AQAAAAEAAAD6/73/AQAAAAIAAAD7/7v/AQABAAAAAAD7/7z/AQABAAEAAAD7/73/AQABAAIAAAD8/7v/AQACAAAAAAD8/7z/AQACAAEAAAD8/73/AQACAAIAAAD6/7j/AQAAAAAAAAD6/7n/AQAAAAEAAAD6/7r/AQAAAAIAAAD7/7j/AQABAAAAAAD7/7n/AQABAAEAAAD7/7r/AQABAAIAAAD8/7j/AQACAAAAAAD8/7n/AQACAAEAAAD8/7r/AQACAAIAAAD6/7X/AQAAAAAAAAD6/7b/AQAAAAEAAAD6/7f/AQAAAAIAAAD7/7X/AQABAAAAAAD7/7b/AQABAAEAAAD7/7f/AQABAAIAAAD8/7X/AQACAAAAAAD8/7b/AQACAAEAAAD8/7f/AQACAAIAAAD6/7L/AQAAAAAAAAD6/7P/AQAAAAEAAAD6/7T/AQAAAAIAAAD7/7L/AQABAAAAAAD7/7P/AQABAAEAAAD7/7T/AQABAAIAAAD8/7L/AQACAAAAAAD8/7P/AQACAAEAAAD8/7T/AQACAAIAAAA=")
 
 [node name="HouseHouse" type="Sprite2D" parent="." unique_id=1346471003]
@@ -169,6 +175,210 @@ position = Vector2(252.00255, -79.79483)
 scale = Vector2(1, 0.9999999)
 skew = 0.34906566
 shape = SubResource("RectangleShape2D_5ck1e")
+
+[node name="Background" type="Node2D" parent="." unique_id=1067441049]
+
+[node name="Grass" type="Parallax2D" parent="Background" unique_id=36638069]
+z_index = -10
+scroll_scale = Vector2(1, 0.1)
+scroll_offset = Vector2(0, 500)
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Image" type="Sprite2D" parent="Background/Grass" unique_id=1200574188]
+texture = ExtResource("16_exi56")
+
+[node name="Mountains" type="Parallax2D" parent="Background" unique_id=766442339]
+z_index = -13
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(500, 0)
+repeat_times = 5
+
+[node name="Image" type="Sprite2D" parent="Background/Mountains" unique_id=780288065]
+texture = ExtResource("19_vm72l")
+
+[node name="Clouds" type="Parallax2D" parent="Background" unique_id=314244790]
+z_index = -3
+scroll_scale = Vector2(0.27, 0.27)
+repeat_size = Vector2(500, 0)
+autoscroll = Vector2(15, 0)
+repeat_times = 5
+
+[node name="Image" type="Sprite2D" parent="Background/Clouds" unique_id=1230602185]
+texture = ExtResource("17_7t8sx")
+
+[node name="CloudsCloser" type="Parallax2D" parent="Background" unique_id=784178160]
+z_index = -2
+scroll_scale = Vector2(0.3, 0.3)
+scroll_offset = Vector2(0, -50)
+repeat_size = Vector2(500, 0)
+autoscroll = Vector2(20, 0)
+repeat_times = 5
+
+[node name="Image" type="Sprite2D" parent="Background/CloudsCloser" unique_id=1292349383]
+texture = ExtResource("17_7t8sx")
+
+[node name="CloudsCloser2" type="Parallax2D" parent="Background" unique_id=746804396]
+z_index = -1
+scale = Vector2(1.2, 1.2)
+scroll_scale = Vector2(0.4, 0.4)
+scroll_offset = Vector2(0, -200)
+repeat_size = Vector2(500, 0)
+autoscroll = Vector2(25, 0)
+repeat_times = 5
+
+[node name="Image" type="Sprite2D" parent="Background/CloudsCloser2" unique_id=926578885]
+texture = ExtResource("18_mg4q0")
+
+[node name="CloudsCloser3" type="Parallax2D" parent="Background" unique_id=1067756731]
+scale = Vector2(1.6, 1.6)
+scroll_scale = Vector2(0.7, 0.7)
+scroll_offset = Vector2(0, -650)
+repeat_size = Vector2(500, 0)
+autoscroll = Vector2(40, 0)
+repeat_times = 5
+
+[node name="Image" type="Sprite2D" parent="Background/CloudsCloser3" unique_id=1361078704]
+texture = ExtResource("17_7t8sx")
+
+[node name="CloudsCloser4" type="Parallax2D" parent="Background" unique_id=499127572]
+z_index = 1
+scale = Vector2(3, 3)
+scroll_scale = Vector2(1.5, 1.5)
+scroll_offset = Vector2(0, -1800)
+repeat_size = Vector2(500, 0)
+autoscroll = Vector2(100, 0)
+repeat_times = 5
+
+[node name="Image" type="Sprite2D" parent="Background/CloudsCloser4" unique_id=411588441]
+texture = ExtResource("18_mg4q0")
+
+[node name="CloudsCloser5" type="Parallax2D" parent="Background" unique_id=1120192902]
+z_index = 2
+scale = Vector2(3, 3)
+scroll_scale = Vector2(2, 2)
+scroll_offset = Vector2(0, -2650)
+repeat_size = Vector2(500, 0)
+autoscroll = Vector2(100, 0)
+repeat_times = 5
+
+[node name="Image" type="Sprite2D" parent="Background/CloudsCloser5" unique_id=976757893]
+texture = ExtResource("17_7t8sx")
+
+[node name="CloudsFurther" type="Parallax2D" parent="Background" unique_id=847815563]
+z_index = -10
+scale = Vector2(0.6, 0.6)
+scroll_scale = Vector2(0.19, 0.19)
+scroll_offset = Vector2(0, 60)
+repeat_size = Vector2(500, 0)
+autoscroll = Vector2(5, 0)
+repeat_times = 10
+
+[node name="Image" type="Sprite2D" parent="Background/CloudsFurther" unique_id=1826249015]
+texture = ExtResource("18_mg4q0")
+
+[node name="CloudsFurther2" type="Parallax2D" parent="Background" unique_id=1496281018]
+z_index = -11
+scale = Vector2(0.4, 0.4)
+scroll_scale = Vector2(0.15, 0.15)
+scroll_offset = Vector2(0, 100)
+repeat_size = Vector2(500, 0)
+autoscroll = Vector2(3, 0)
+repeat_times = 15
+
+[node name="Image" type="Sprite2D" parent="Background/CloudsFurther2" unique_id=1506909294]
+texture = ExtResource("17_7t8sx")
+
+[node name="CloudsFurther3" type="Parallax2D" parent="Background" unique_id=435598900]
+z_index = -12
+scale = Vector2(0.3, 0.3)
+scroll_scale = Vector2(0.13, 0.13)
+scroll_offset = Vector2(0, 120)
+repeat_size = Vector2(500, 0)
+autoscroll = Vector2(2, 0)
+repeat_times = 18
+
+[node name="Image" type="Sprite2D" parent="Background/CloudsFurther3" unique_id=27378412]
+texture = ExtResource("18_mg4q0")
+
+[node name="CloudsFurther4" type="Parallax2D" parent="Background" unique_id=2014392632]
+z_index = -13
+scale = Vector2(0.2, 0.2)
+scroll_scale = Vector2(0.11, 0.11)
+scroll_offset = Vector2(0, 140)
+repeat_size = Vector2(500, 0)
+autoscroll = Vector2(1, 0)
+repeat_times = 25
+
+[node name="Image" type="Sprite2D" parent="Background/CloudsFurther4" unique_id=346815340]
+texture = ExtResource("18_mg4q0")
+
+[node name="CloudsFurther5" type="Parallax2D" parent="Background" unique_id=1690501658]
+z_index = -14
+scale = Vector2(0.15, 0.15)
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(0, 150)
+repeat_size = Vector2(500, 0)
+autoscroll = Vector2(0.5, 0)
+repeat_times = 35
+
+[node name="Image" type="Sprite2D" parent="Background/CloudsFurther5" unique_id=319635108]
+texture = ExtResource("17_7t8sx")
+
+[node name="CloudsFurther6" type="Parallax2D" parent="Background" unique_id=1956388365]
+z_index = -15
+scale = Vector2(0.1, 0.1)
+scroll_scale = Vector2(0.09, 0.09)
+scroll_offset = Vector2(0, 160)
+repeat_size = Vector2(500, 0)
+autoscroll = Vector2(0.25, 0)
+repeat_times = 50
+
+[node name="Image" type="Sprite2D" parent="Background/CloudsFurther6" unique_id=687820027]
+texture = ExtResource("17_7t8sx")
+
+[node name="Trees" type="Parallax2D" parent="Background" unique_id=278262301]
+z_index = -2
+scroll_scale = Vector2(0.3, 0.3)
+scroll_offset = Vector2(0, 100)
+repeat_size = Vector2(500, 0)
+repeat_times = 7
+
+[node name="Image" type="Sprite2D" parent="Background/Trees" unique_id=1711619455]
+texture = ExtResource("20_22asu")
+
+[node name="TreesFurther" type="Parallax2D" parent="Background" unique_id=1777046924]
+z_index = -7
+scale = Vector2(0.6, 0.6)
+scroll_scale = Vector2(0.2, 0.2)
+scroll_offset = Vector2(0, 100)
+repeat_size = Vector2(500, 0)
+repeat_times = 10
+
+[node name="Image" type="Sprite2D" parent="Background/TreesFurther" unique_id=1282070423]
+texture = ExtResource("20_22asu")
+
+[node name="TreesDaven" type="Parallax2D" parent="Background" unique_id=330805118]
+z_index = -5
+scale = Vector2(0.8, 0.8)
+scroll_scale = Vector2(0.25, 0.25)
+scroll_offset = Vector2(0, 100)
+repeat_size = Vector2(500, 0)
+repeat_times = 7
+
+[node name="Image" type="Sprite2D" parent="Background/TreesDaven" unique_id=447865790]
+texture = ExtResource("21_fkdbe")
+
+[node name="TreesFurtherDaven" type="Parallax2D" parent="Background" unique_id=762027431]
+z_index = -8
+scale = Vector2(0.5, 0.5)
+scroll_scale = Vector2(0.15, 0.15)
+scroll_offset = Vector2(0, 125)
+repeat_size = Vector2(500, 0)
+repeat_times = 10
+
+[node name="Image" type="Sprite2D" parent="Background/TreesFurtherDaven" unique_id=1473415976]
+texture = ExtResource("21_fkdbe")
 
 [connection signal="pressed" from="Player/MenuButtonPaused" to="Player" method="_on_menu_pressed"]
 [connection signal="pressed" from="Player/MenuButtonLost" to="Player" method="_on_menu_pressed"]

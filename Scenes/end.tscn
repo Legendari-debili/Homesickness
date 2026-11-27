@@ -52,3 +52,5 @@ position = Vector2(-40, -43)
 position = Vector2(44, -296.00003)
 scale = Vector2(1.234, 1.27)
 texture = ExtResource("4_7isrc")
+
+[connection signal="body_entered" from="Area" to="Area" method="_on_body_entered"]

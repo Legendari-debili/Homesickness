@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bn4df03w2ih3e"
-path="res://.godot/imported/FUCKINGDREAMS.png-b49dda053e0ed5011bc2803ff09b880a.ctex"
+path="res://.godot/imported/FUCKINGDREAMS.png-fcf9af6aafee269ef3c3952fd015342a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/shit/FUCKINGDREAMS.png"
-dest_files=["res://.godot/imported/FUCKINGDREAMS.png-b49dda053e0ed5011bc2803ff09b880a.ctex"]
+source_file="res://Images/Background/FUCKINGDREAMS.png"
+dest_files=["res://.godot/imported/FUCKINGDREAMS.png-fcf9af6aafee269ef3c3952fd015342a.ctex"]
 
 [params]
 

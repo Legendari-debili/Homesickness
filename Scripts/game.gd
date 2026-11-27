@@ -1,37 +1,50 @@
 extends Node2D
 
-const TILE_SIZE_PX := 48
-const LEVEL_LENGTH_TILES := 10
-const LEVEL_LENGTH_PX := TILE_SIZE_PX * LEVEL_LENGTH_TILES
-var level_pos := Vector2(0, 0)
+var rng = RandomNumberGenerator.new()
 
-@onready var home_area = $HouseHouse/HomeArea
-@onready var player = $Player
+const TILE_SIZE_PX: int = 48
+const LEVEL_LENGTH_TILES: int = 10
+const LEVEL_LENGTH_PX: int = TILE_SIZE_PX * LEVEL_LENGTH_TILES
+var level_pos: Vector2 = Vector2(0, 0)
 
-const LEVELS = [
-	[preload("res://Scenes/Levels/level1.tscn"), preload("res://Scenes/Levels/level1e.tscn")],
-	[preload("res://Scenes/Levels/level2.tscn"), preload("res://Scenes/Levels/level2e.tscn")],
-	[preload("res://Scenes/Levels/level3.tscn"), preload("res://Scenes/Levels/level3e.tscn")],
-	[preload("res://Scenes/Levels/level4.tscn"), preload("res://Scenes/Levels/level4e.tscn")],
-	[preload("res://Scenes/Levels/level5.tscn"), preload("res://Scenes/Levels/level5e.tscn")],
-	[preload("res://Scenes/Levels/level6.tscn")],
-	[preload("res://Scenes/Levels/level7.tscn"), preload("res://Scenes/Levels/level7e.tscn")],
-	[preload("res://Scenes/Levels/level8.tscn"), preload("res://Scenes/Levels/level8e.tscn")],
-	[preload("res://Scenes/Levels/level9.tscn"), preload("res://Scenes/Levels/level9e.tscn")],
-]
+@onready var home_area: Area2D = $HouseHouse/HomeArea
+@onready var player: CharacterBody2D = $Player
 
-const END = preload("res://Scenes/Levels/end.tscn")
+func load_levels() -> Array[Resource]:
+	const PATH_TO_LEVELS: String = "res://Scenes/Levels"
+	var loaded_levels: Array[Resource] = []
+	
+	for file_name: String in ResourceLoader.list_directory(PATH_TO_LEVELS):
+		if !file_name.ends_with(".tscn"):
+			push_warning("Found non-scene file", file_name, "in", PATH_TO_LEVELS)
+			continue
+		var scene_path: String = PATH_TO_LEVELS.path_join(file_name)
+		loaded_levels.append(load(scene_path))
+	
+	return loaded_levels
 
-func create_level(level: Resource, pos: Vector2) -> void:
-	var scene = level.instantiate()
-	scene.global_position = pos
-	add_child(scene)
+var LEVELS = load_levels() # Treat this like a constant!
+const END = preload("res://Scenes/end.tscn")
+
+func create_level(scene: Resource, pos: Vector2) -> void:
+	var level: TileMapLayer = scene.instantiate()
+	level.global_position = pos
+	var ep_spawns = level.get_children() as Array[Area2D]
+	
+	if rng.randi_range(0, 1) and !ep_spawns.is_empty():
+		var ep = ep_spawns.pick_random()
+		ep_spawns.erase(ep)
+	
+	for ep in ep_spawns: ep.queue_free()
+	add_child(level)
 
 func _ready() -> void:
 	for i in range(1, Globals.level_count):
-		var picked_level = LEVELS.pick_random().pick_random()
+		var picked_level = LEVELS.pick_random()
 		level_pos = Vector2(LEVEL_LENGTH_PX * i, 0)
 		create_level(picked_level, level_pos)
 	
-	var end_x_pos := Vector2(LEVEL_LENGTH_PX * Globals.level_count, 0)
-	create_level(END, end_x_pos)
+	var end_pos: Vector2 = Vector2(LEVEL_LENGTH_PX * Globals.level_count, 0)
+	var end_level: TileMapLayer = END.instantiate()
+	end_level.global_position = end_pos
+	add_child(end_level)

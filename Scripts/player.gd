@@ -1,25 +1,29 @@
 extends CharacterBody2D
 
+# Constants #
 const JUMP_VELOCITY := 30.0
 const SPEED := 50.0
 const LOST_EP_PER_BOUNCE := 1
 const LAUNCH_LOSS_COEFFICIENT := 2
 const LOST_EP_PER_LAUNCH := LOST_EP_PER_BOUNCE * LAUNCH_LOSS_COEFFICIENT
 
-@onready var bounce_audio = $BounceAudio
-@onready var launch_audio = $LaunchAudio
-@onready var lose_audio = $LoseAudio
-@onready var stats_label = $StatsLabel
-
+# Buttons #
 @onready var menu_button_paused = $MenuButtonPaused
 @onready var menu_button_lost = $MenuButtonLost
 @onready var resume_button = $ResumeButton
 @onready var try_again_button = $TryAgainButton
 
+# Labels #
+@onready var stats_label = $StatsLabel
 @onready var pause_label = $PauseLabel
 @onready var lose_label = $Lose
 
+# Audio #
+@onready var bounce_audio = $BounceAudio
+@onready var launch_audio = $LaunchAudio
+@onready var lose_audio = $LoseAudio
 
+# Behaviour #
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -62,6 +66,7 @@ func _process(_delta: float) -> void:
 		resume_button.visible = true
 		pause_label.visible = true
 
+# Signals #
 func _on_menu_pressed() -> void:
 	Globals.reset_global_variables(true)
 	get_tree().paused = false

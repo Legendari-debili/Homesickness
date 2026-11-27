@@ -1,13 +1,13 @@
 extends Node
 
 ## GLOBAL VARIABLES ##
-var ep := 15
-var pos_y := 0
-var level_count := 3
+var ep: int = 15
+var pos_y: int = 0
+var level_count: int = 3
 
 # Variables which can only be resetted using full_reset #
-var in_game := false
-var touched_end := false
+var in_game: bool = false
+var touched_end: bool = false
 
 func reset_global_variables(full_reset: bool = false) -> void:
 	ep = 15

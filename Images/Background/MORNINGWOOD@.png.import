@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqesqkm6su3o5"
-path="res://.godot/imported/MORNINGWOOD@.png-2ad03792538c90273c0bdf0273d277c8.ctex"
+path="res://.godot/imported/MORNINGWOOD@.png-916942538885d51577f590dadf1da84f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/shit/MORNINGWOOD@.png"
-dest_files=["res://.godot/imported/MORNINGWOOD@.png-2ad03792538c90273c0bdf0273d277c8.ctex"]
+source_file="res://Images/Background/MORNINGWOOD@.png"
+dest_files=["res://.godot/imported/MORNINGWOOD@.png-916942538885d51577f590dadf1da84f.ctex"]
 
 [params]
 

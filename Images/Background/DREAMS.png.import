@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvgxtek0w6bb1"
-path="res://.godot/imported/ass.png-1660bd403fc2793664063cc134f31c5c.ctex"
+uid="uid://cxnngckmwfa7a"
+path="res://.godot/imported/DREAMS.png-434b2f06e37d7f442ec720f0f5c8c223.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/shit/ass.png"
-dest_files=["res://.godot/imported/ass.png-1660bd403fc2793664063cc134f31c5c.ctex"]
+source_file="res://Images/Background/DREAMS.png"
+dest_files=["res://.godot/imported/DREAMS.png-434b2f06e37d7f442ec720f0f5c8c223.ctex"]
 
 [params]
 

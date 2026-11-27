@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxnngckmwfa7a"
-path="res://.godot/imported/DREAMS.png-73e9e5f965697276696709a3727609da.ctex"
+uid="uid://comlgyakmqjaf"
+path="res://.godot/imported/morningwood.png-4745acbad361231d766991834fe9926f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/shit/DREAMS.png"
-dest_files=["res://.godot/imported/DREAMS.png-73e9e5f965697276696709a3727609da.ctex"]
+source_file="res://Images/Background/morningwood.png"
+dest_files=["res://.godot/imported/morningwood.png-4745acbad361231d766991834fe9926f.ctex"]
 
 [params]
 

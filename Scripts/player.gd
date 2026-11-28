@@ -8,15 +8,15 @@ const LAUNCH_LOSS_COEFFICIENT := 2
 const LOST_EP_PER_LAUNCH := LOST_EP_PER_BOUNCE * LAUNCH_LOSS_COEFFICIENT
 
 # Buttons #
-@onready var menu_button_paused = $MenuButtonPaused
-@onready var menu_button_lost = $MenuButtonLost
-@onready var resume_button = $ResumeButton
-@onready var try_again_button = $TryAgainButton
+@onready var menu_button_paused = $GUI/MenuButtonPaused
+@onready var menu_button_lost = $GUI/MenuButtonLost
+@onready var resume_button = $GUI/ResumeButton
+@onready var try_again_button = $GUI/TryAgainButton
 
 # Labels #
-@onready var stats_label = $StatsLabel
-@onready var pause_label = $PauseLabel
-@onready var lose_label = $Lose
+@onready var stats_label = $GUI/StatsLabel
+@onready var pause_label = $GUI/PauseLabel
+@onready var lose_label = $GUI/Lose
 
 # Audio #
 @onready var bounce_audio = $BounceAudio

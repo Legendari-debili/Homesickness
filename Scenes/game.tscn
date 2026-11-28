@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bh1w0rmesvx81" path="res://Scripts/game.gd" id="1_m6s4v"]
 [ext_resource type="PackedScene" uid="uid://k4brlpxyg81a" path="res://Scenes/Objects/ball.tscn" id="2_mu4qh"]
 [ext_resource type="FontFile" uid="uid://dletofr8xn4rs" path="res://Miscellaneous/Diabolik.ttf" id="3_sx1sf"]
-[ext_resource type="PackedScene" uid="uid://ccbxhu3ii3kkq" path="res://Scenes/LevelsBlank/level1.tscn" id="5_o2f4f"]
 [ext_resource type="AudioStream" uid="uid://bbomv4x4a6jt6" path="res://SFX/balls_plus.mp3" id="5_o4phl"]
 [ext_resource type="AudioStream" uid="uid://c376iohg1y0xl" path="res://SFX/launch.mp3" id="6_34uq3"]
 [ext_resource type="Texture2D" uid="uid://bf5e2hg6p1bd3" path="res://Images/HouseHouse.png" id="6_ifunt"]
@@ -14,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://gocn1jvg3j3m" path="res://Images/Text/win.png" id="11_sx1sf"]
 [ext_resource type="AudioStream" uid="uid://ggmm4iu4txtl" path="res://SFX/Eiropas_Parlaments.mp3" id="12_5fn2v"]
 [ext_resource type="Texture2D" uid="uid://bu4drgri02s4q" path="res://Images/Text/lose.png" id="12_qaynj"]
+[ext_resource type="Texture2D" uid="uid://dkn8vput0lhrh" path="res://Images/brick.png" id="13_exi56"]
 [ext_resource type="Script" uid="uid://bfpusqvgvmclj" path="res://Scripts/home_touch.gd" id="13_ph1u7"]
 [ext_resource type="Texture2D" uid="uid://cvgxtek0w6bb1" path="res://Images/Background/ass.png" id="16_exi56"]
 [ext_resource type="Texture2D" uid="uid://cxnngckmwfa7a" path="res://Images/Background/DREAMS.png" id="17_7t8sx"]
@@ -21,6 +21,31 @@
 [ext_resource type="Texture2D" uid="uid://pcgi2skyeo8v" path="res://Images/Background/TITS.png" id="19_vm72l"]
 [ext_resource type="Texture2D" uid="uid://comlgyakmqjaf" path="res://Images/Background/morningwood.png" id="20_22asu"]
 [ext_resource type="Texture2D" uid="uid://bqesqkm6su3o5" path="res://Images/Background/MORNINGWOOD@.png" id="21_fkdbe"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i4kf4"]
+texture = ExtResource("13_exi56")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_5ck1e"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_i4kf4")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ck1e"]
 size = Vector2(233.61032, 170.70511)
@@ -32,33 +57,11 @@ script = ExtResource("1_m6s4v")
 position = Vector2(0, -30)
 scale = Vector2(3, 3)
 
-[node name="StatsLabel" type="Label" parent="Player" unique_id=1836899178]
-offset_left = -187.0
-offset_top = -103.33333
-offset_right = -111.66667
-offset_bottom = -65.33333
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = -5
-theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("3_sx1sf")
-theme_override_font_sizes/font_size = 32
-text = "EP: 
-Levels: "
-
 [node name="BounceAudio" type="AudioStreamPlayer2D" parent="Player" unique_id=1130543134]
 stream = ExtResource("5_o4phl")
 
 [node name="LaunchAudio" type="AudioStreamPlayer2D" parent="Player" unique_id=1510108722]
 stream = ExtResource("6_34uq3")
-
-[node name="GoHomeDucker" type="TextureRect" parent="Player" unique_id=290249605]
-visible = false
-offset_left = -168.33334
-offset_top = -89.33333
-offset_right = 160.12714
-offset_bottom = 95.33334
-texture = ExtResource("7_34uq3")
-expand_mode = 1
 
 [node name="LoseAudio" type="AudioStreamPlayer2D" parent="Player" unique_id=550873988]
 process_mode = 3
@@ -74,8 +77,43 @@ volume_db = 5.0
 stream = ExtResource("10_ph1u7")
 volume_db = 5.0
 
-[node name="Win" type="TextureRect" parent="Player" unique_id=1719657638]
+[node name="EPGainAudio" type="AudioStreamPlayer2D" parent="Player" unique_id=912103507]
+stream = ExtResource("12_5fn2v")
+volume_db = -10.0
+
+[node name="GUI" type="Control" parent="Player" unique_id=2125132145]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StatsLabel" type="Label" parent="Player/GUI" unique_id=1836899178]
+layout_mode = 0
+offset_left = -187.0
+offset_top = -103.333336
+offset_right = -105.0
+offset_bottom = -44.333336
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -5
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_sx1sf")
+theme_override_font_sizes/font_size = 32
+text = "EP: 
+Levels: "
+
+[node name="GoHomeDucker" type="TextureRect" parent="Player/GUI" unique_id=290249605]
 visible = false
+layout_mode = 0
+offset_left = -168.33334
+offset_top = -89.333336
+offset_right = 160.12714
+offset_bottom = 95.333336
+texture = ExtResource("7_34uq3")
+expand_mode = 1
+
+[node name="Win" type="TextureRect" parent="Player/GUI" unique_id=1719657638]
+visible = false
+layout_mode = 0
 offset_left = -195.0
 offset_top = -99.0
 offset_right = 196.33334
@@ -83,9 +121,10 @@ offset_bottom = 96.66667
 texture = ExtResource("11_sx1sf")
 expand_mode = 1
 
-[node name="Lose" type="TextureRect" parent="Player" unique_id=375771408]
+[node name="Lose" type="TextureRect" parent="Player/GUI" unique_id=375771408]
 process_mode = 3
 visible = false
+layout_mode = 0
 offset_left = -195.0
 offset_top = -99.0
 offset_right = 196.33334
@@ -93,24 +132,22 @@ offset_bottom = 96.66667
 texture = ExtResource("12_qaynj")
 expand_mode = 1
 
-[node name="EPGainAudio" type="AudioStreamPlayer2D" parent="Player" unique_id=912103507]
-stream = ExtResource("12_5fn2v")
-volume_db = -10.0
-
-[node name="MenuButtonPaused" type="Button" parent="Player" unique_id=567163243]
+[node name="MenuButtonPaused" type="Button" parent="Player/GUI" unique_id=567163243]
 process_mode = 3
 visible = false
+layout_mode = 0
 offset_left = 16.666668
 offset_top = 48.666668
-offset_right = 149.00002
+offset_right = 149.66667
 offset_bottom = 93.66667
 theme_override_fonts/font = ExtResource("3_sx1sf")
 theme_override_font_sizes/font_size = 32
 text = "main menu"
 
-[node name="MenuButtonLost" type="Button" parent="Player" unique_id=410596201]
+[node name="MenuButtonLost" type="Button" parent="Player/GUI" unique_id=410596201]
 process_mode = 3
 visible = false
+layout_mode = 0
 offset_left = 53.333336
 offset_top = 32.666668
 offset_right = 155.33334
@@ -119,9 +156,10 @@ theme_override_fonts/font = ExtResource("3_sx1sf")
 theme_override_font_sizes/font_size = 24
 text = "main menu"
 
-[node name="TryAgainButton" type="Button" parent="Player" unique_id=1693718843]
+[node name="TryAgainButton" type="Button" parent="Player/GUI" unique_id=1693718843]
 process_mode = 3
 visible = false
+layout_mode = 0
 offset_left = 53.333336
 offset_top = 69.0
 offset_right = 155.33334
@@ -130,9 +168,10 @@ theme_override_fonts/font = ExtResource("3_sx1sf")
 theme_override_font_sizes/font_size = 24
 text = "try again"
 
-[node name="ResumeButton" type="Button" parent="Player" unique_id=11494051]
+[node name="ResumeButton" type="Button" parent="Player/GUI" unique_id=11494051]
 process_mode = 3
 visible = false
+layout_mode = 0
 offset_left = -158.0
 offset_top = 49.0
 offset_right = -25.0
@@ -141,12 +180,13 @@ theme_override_fonts/font = ExtResource("3_sx1sf")
 theme_override_font_sizes/font_size = 32
 text = "resume"
 
-[node name="PauseLabel" type="Label" parent="Player" unique_id=592966550]
+[node name="PauseLabel" type="Label" parent="Player/GUI" unique_id=592966550]
 visible = false
-offset_left = -102.666664
-offset_top = -96.00001
-offset_right = 95.333336
-offset_bottom = -32.000008
+layout_mode = 0
+offset_left = -102.66667
+offset_top = -96.000015
+offset_right = 95.33333
+offset_bottom = -32.000015
 theme_override_colors/font_color = Color(1, 0.43137255, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -154,8 +194,13 @@ theme_override_fonts/font = ExtResource("3_sx1sf")
 theme_override_font_sizes/font_size = 64
 text = "PAUSED"
 
-[node name="Start" parent="." unique_id=858672923 instance=ExtResource("5_o2f4f")]
+[node name="Start" type="TileMapLayer" parent="." unique_id=858672923]
+show_behind_parent = true
 tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAEAAAAAAAIAAQAAAAIAAAABAAAAAQABAAAAAAABAAEAAQABAAEAAAABAAIAAQABAAIAAAACAAAAAQACAAAAAAACAAEAAQACAAEAAAACAAIAAQACAAIAAAADAAAAAQAAAAAAAAADAAEAAQAAAAEAAAADAAIAAQAAAAIAAAAEAAAAAQABAAAAAAAEAAEAAQABAAEAAAAEAAIAAQABAAIAAAAFAAAAAQACAAAAAAAFAAEAAQACAAEAAAAFAAIAAQACAAIAAAAGAAAAAQAAAAAAAAAGAAEAAQAAAAEAAAAGAAIAAQAAAAIAAAAHAAAAAQABAAAAAAAHAAEAAQABAAEAAAAHAAIAAQABAAIAAAAIAAAAAQACAAAAAAAIAAEAAQACAAEAAAAIAAIAAQACAAIAAAAJAAAAAQAAAAAAAAAJAAEAAQAAAAEAAAAJAAIAAQAAAAIAAAAKAAAAAQABAAAAAAAKAAEAAQABAAEAAAAKAAIAAQABAAIAAAALAAAAAQACAAAAAAALAAEAAQACAAEAAAALAAIAAQACAAIAAAAMAAAAAQAAAAAAAAAMAAEAAQAAAAEAAAAMAAIAAQAAAAIAAAANAAAAAQABAAAAAAANAAEAAQABAAEAAAANAAIAAQABAAIAAAAOAAAAAQACAAAAAAAOAAEAAQACAAEAAAAOAAIAAQACAAIAAAAPAAAAAQAAAAAAAAAPAAEAAQAAAAEAAAAPAAIAAQAAAAIAAAAQAAAAAQABAAAAAAAQAAEAAQABAAEAAAAQAAIAAQABAAIAAAARAAAAAQACAAAAAAARAAEAAQACAAEAAAARAAIAAQACAAIAAAASAAAAAQAAAAAAAAASAAEAAQAAAAEAAAASAAIAAQAAAAIAAAATAAAAAQABAAAAAAATAAEAAQABAAEAAAATAAIAAQABAAIAAAAUAAAAAQACAAAAAAAUAAEAAQACAAEAAAAUAAIAAQACAAIAAAAVAAAAAQAAAAAAAAAVAAEAAQAAAAEAAAAVAAIAAQAAAAIAAAAWAAAAAQABAAAAAAAWAAEAAQABAAEAAAAWAAIAAQABAAIAAAAXAAAAAQACAAAAAAAXAAEAAQACAAEAAAAXAAIAAQACAAIAAAAYAAAAAQAAAAAAAAAYAAEAAQAAAAEAAAAYAAIAAQAAAAIAAAAZAAAAAQABAAAAAAAZAAEAAQABAAEAAAAZAAIAAQABAAIAAAAaAAAAAQACAAAAAAAaAAEAAQACAAEAAAAaAAIAAQACAAIAAAAbAAAAAQAAAAAAAAAbAAEAAQAAAAEAAAAbAAIAAQAAAAIAAAAcAAAAAQABAAAAAAAcAAEAAQABAAEAAAAcAAIAAQABAAIAAAAdAAAAAQACAAAAAAAdAAEAAQACAAEAAAAdAAIAAQACAAIAAAD9/wAAAQAAAAAAAAD9/wEAAQAAAAEAAAD9/wIAAQAAAAIAAAD+/wAAAQABAAAAAAD+/wEAAQABAAEAAAD+/wIAAQABAAIAAAD//wAAAQACAAAAAAD//wEAAQACAAEAAAD//wIAAQACAAIAAAD6/wAAAQAAAAAAAAD6/wEAAQAAAAEAAAD6/wIAAQAAAAIAAAD7/wAAAQABAAAAAAD7/wEAAQABAAEAAAD7/wIAAQABAAIAAAD8/wAAAQACAAAAAAD8/wEAAQACAAEAAAD8/wIAAQACAAIAAAD6//3/AQAAAAAAAAD6//7/AQAAAAEAAAD6////AQAAAAIAAAD7//3/AQABAAAAAAD7//7/AQABAAEAAAD7////AQABAAIAAAD8//3/AQACAAAAAAD8//7/AQACAAEAAAD8////AQACAAIAAAD6//r/AQAAAAAAAAD6//v/AQAAAAEAAAD6//z/AQAAAAIAAAD7//r/AQABAAAAAAD7//v/AQABAAEAAAD7//z/AQABAAIAAAD8//r/AQACAAAAAAD8//v/AQACAAEAAAD8//z/AQACAAIAAAD6//f/AQAAAAAAAAD6//j/AQAAAAEAAAD6//n/AQAAAAIAAAD7//f/AQABAAAAAAD7//j/AQABAAEAAAD7//n/AQABAAIAAAD8//f/AQACAAAAAAD8//j/AQACAAEAAAD8//n/AQACAAIAAAD6//T/AQAAAAAAAAD6//X/AQAAAAEAAAD6//b/AQAAAAIAAAD7//T/AQABAAAAAAD7//X/AQABAAEAAAD7//b/AQABAAIAAAD8//T/AQACAAAAAAD8//X/AQACAAEAAAD8//b/AQACAAIAAAD6//H/AQAAAAAAAAD6//L/AQAAAAEAAAD6//P/AQAAAAIAAAD7//H/AQABAAAAAAD7//L/AQABAAEAAAD7//P/AQABAAIAAAD8//H/AQACAAAAAAD8//L/AQACAAEAAAD8//P/AQACAAIAAAD6/+7/AQAAAAAAAAD6/+//AQAAAAEAAAD6//D/AQAAAAIAAAD7/+7/AQABAAAAAAD7/+//AQABAAEAAAD7//D/AQABAAIAAAD8/+7/AQACAAAAAAD8/+//AQACAAEAAAD8//D/AQACAAIAAAD6/+v/AQAAAAAAAAD6/+z/AQAAAAEAAAD6/+3/AQAAAAIAAAD7/+v/AQABAAAAAAD7/+z/AQABAAEAAAD7/+3/AQABAAIAAAD8/+v/AQACAAAAAAD8/+z/AQACAAEAAAD8/+3/AQACAAIAAAD6/+j/AQAAAAAAAAD6/+n/AQAAAAEAAAD6/+r/AQAAAAIAAAD7/+j/AQABAAAAAAD7/+n/AQABAAEAAAD7/+r/AQABAAIAAAD8/+j/AQACAAAAAAD8/+n/AQACAAEAAAD8/+r/AQACAAIAAAD6/+X/AQAAAAAAAAD6/+b/AQAAAAEAAAD6/+f/AQAAAAIAAAD7/+X/AQABAAAAAAD7/+b/AQABAAEAAAD7/+f/AQABAAIAAAD8/+X/AQACAAAAAAD8/+b/AQACAAEAAAD8/+f/AQACAAIAAAD6/+L/AQAAAAAAAAD6/+P/AQAAAAEAAAD6/+T/AQAAAAIAAAD7/+L/AQABAAAAAAD7/+P/AQABAAEAAAD7/+T/AQABAAIAAAD8/+L/AQACAAAAAAD8/+P/AQACAAEAAAD8/+T/AQACAAIAAAD6/9//AQAAAAAAAAD6/+D/AQAAAAEAAAD6/+H/AQAAAAIAAAD7/9//AQABAAAAAAD7/+D/AQABAAEAAAD7/+H/AQABAAIAAAD8/9//AQACAAAAAAD8/+D/AQACAAEAAAD8/+H/AQACAAIAAAD6/9z/AQAAAAAAAAD6/93/AQAAAAEAAAD6/97/AQAAAAIAAAD7/9z/AQABAAAAAAD7/93/AQABAAEAAAD7/97/AQABAAIAAAD8/9z/AQACAAAAAAD8/93/AQACAAEAAAD8/97/AQACAAIAAAD6/9n/AQAAAAAAAAD6/9r/AQAAAAEAAAD6/9v/AQAAAAIAAAD7/9n/AQABAAAAAAD7/9r/AQABAAEAAAD7/9v/AQABAAIAAAD8/9n/AQACAAAAAAD8/9r/AQACAAEAAAD8/9v/AQACAAIAAAD6/9b/AQAAAAAAAAD6/9f/AQAAAAEAAAD6/9j/AQAAAAIAAAD7/9b/AQABAAAAAAD7/9f/AQABAAEAAAD7/9j/AQABAAIAAAD8/9b/AQACAAAAAAD8/9f/AQACAAEAAAD8/9j/AQACAAIAAAD6/9P/AQAAAAAAAAD6/9T/AQAAAAEAAAD6/9X/AQAAAAIAAAD7/9P/AQABAAAAAAD7/9T/AQABAAEAAAD7/9X/AQABAAIAAAD8/9P/AQACAAAAAAD8/9T/AQACAAEAAAD8/9X/AQACAAIAAAD6/9D/AQAAAAAAAAD6/9H/AQAAAAEAAAD6/9L/AQAAAAIAAAD7/9D/AQABAAAAAAD7/9H/AQABAAEAAAD7/9L/AQABAAIAAAD8/9D/AQACAAAAAAD8/9H/AQACAAEAAAD8/9L/AQACAAIAAAD6/83/AQAAAAAAAAD6/87/AQAAAAEAAAD6/8//AQAAAAIAAAD7/83/AQABAAAAAAD7/87/AQABAAEAAAD7/8//AQABAAIAAAD8/83/AQACAAAAAAD8/87/AQACAAEAAAD8/8//AQACAAIAAAD6/8r/AQAAAAAAAAD6/8v/AQAAAAEAAAD6/8z/AQAAAAIAAAD7/8r/AQABAAAAAAD7/8v/AQABAAEAAAD7/8z/AQABAAIAAAD8/8r/AQACAAAAAAD8/8v/AQACAAEAAAD8/8z/AQACAAIAAAD6/8f/AQAAAAAAAAD6/8j/AQAAAAEAAAD6/8n/AQAAAAIAAAD7/8f/AQABAAAAAAD7/8j/AQABAAEAAAD7/8n/AQABAAIAAAD8/8f/AQACAAAAAAD8/8j/AQACAAEAAAD8/8n/AQACAAIAAAD6/8T/AQAAAAAAAAD6/8X/AQAAAAEAAAD6/8b/AQAAAAIAAAD7/8T/AQABAAAAAAD7/8X/AQABAAEAAAD7/8b/AQABAAIAAAD8/8T/AQACAAAAAAD8/8X/AQACAAEAAAD8/8b/AQACAAIAAAD6/8H/AQAAAAAAAAD6/8L/AQAAAAEAAAD6/8P/AQAAAAIAAAD7/8H/AQABAAAAAAD7/8L/AQABAAEAAAD7/8P/AQABAAIAAAD8/8H/AQACAAAAAAD8/8L/AQACAAEAAAD8/8P/AQACAAIAAAD6/77/AQAAAAAAAAD6/7//AQAAAAEAAAD6/8D/AQAAAAIAAAD7/77/AQABAAAAAAD7/7//AQABAAEAAAD7/8D/AQABAAIAAAD8/77/AQACAAAAAAD8/7//AQACAAEAAAD8/8D/AQACAAIAAAD6/7v/AQAAAAAAAAD6/7z/AQAAAAEAAAD6/73/AQAAAAIAAAD7/7v/AQABAAAAAAD7/7z/AQABAAEAAAD7/73/AQABAAIAAAD8/7v/AQACAAAAAAD8/7z/AQACAAEAAAD8/73/AQACAAIAAAD6/7j/AQAAAAAAAAD6/7n/AQAAAAEAAAD6/7r/AQAAAAIAAAD7/7j/AQABAAAAAAD7/7n/AQABAAEAAAD7/7r/AQABAAIAAAD8/7j/AQACAAAAAAD8/7n/AQACAAEAAAD8/7r/AQACAAIAAAD6/7X/AQAAAAAAAAD6/7b/AQAAAAEAAAD6/7f/AQAAAAIAAAD7/7X/AQABAAAAAAD7/7b/AQABAAEAAAD7/7f/AQABAAIAAAD8/7X/AQACAAAAAAD8/7b/AQACAAEAAAD8/7f/AQACAAIAAAD6/7L/AQAAAAAAAAD6/7P/AQAAAAEAAAD6/7T/AQAAAAIAAAD7/7L/AQABAAAAAAD7/7P/AQABAAEAAAD7/7T/AQABAAIAAAD8/7L/AQACAAAAAAD8/7P/AQACAAEAAAD8/7T/AQACAAIAAAA=")
+tile_set = SubResource("TileSet_5ck1e")
+
+[node name="EPSpawn" type="Sprite2D" parent="Start" unique_id=691726166]
+position = Vector2(240, -40)
 
 [node name="HouseHouse" type="Sprite2D" parent="." unique_id=1346471003]
 show_behind_parent = true
@@ -380,7 +425,7 @@ repeat_times = 10
 [node name="Image" type="Sprite2D" parent="Background/TreesFurtherDaven" unique_id=1473415976]
 texture = ExtResource("21_fkdbe")
 
-[connection signal="pressed" from="Player/MenuButtonPaused" to="Player" method="_on_menu_pressed"]
-[connection signal="pressed" from="Player/MenuButtonLost" to="Player" method="_on_menu_pressed"]
-[connection signal="pressed" from="Player/TryAgainButton" to="Player" method="_on_try_again_pressed"]
-[connection signal="pressed" from="Player/ResumeButton" to="Player" method="_on_resume_pressed"]
+[connection signal="pressed" from="Player/GUI/MenuButtonPaused" to="Player" method="_on_menu_pressed"]
+[connection signal="pressed" from="Player/GUI/MenuButtonLost" to="Player" method="_on_menu_pressed"]
+[connection signal="pressed" from="Player/GUI/TryAgainButton" to="Player" method="_on_try_again_pressed"]
+[connection signal="pressed" from="Player/GUI/ResumeButton" to="Player" method="_on_resume_pressed"]
